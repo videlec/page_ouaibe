@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block extra_header %}
+<link rel="stylesheet" type="text/css" href="highlighting.css">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endblock %}
+
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block body %}
+
+{{ blog_content }}
+
+<hr/>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+<img alt="Creative Commons License" style="border-width:0"
+src="cc-by-nc-88x31.png"/></a><br />Cet article est publié sous
+la licence <a rel="license"
+href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+Attribution-NonCommercial 4.0 International License</a>.
+<br />This article is published under the <a rel="license"
+href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+Attribution-NonCommercial 4.0 International License</a>.
+
+{% endblock %}

@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block title %}Recherche{% endblock %}
+{% block body %}
+
+<div class="section">
+<h2>Publications</h2>
+<p>
+<ol reversed="true" class="publi">
+{% for pub in publications %}
+<li>
+
+{% if pub.coauthors %}
+<auteurs>with
+{% for author in pub.coauthors %}
+{{ author }}
+{% endfor %}
+</auteurs>
+{% endif %}
+<titre>"{{ pub.title }}"</titre>
+<br/>
+
+
+<journal>
+{% if pub.website %}
+<a href="$pub["website"]">
+{% endif %}
+{{ journals[pub.journal]['short-name'] }}
+{{ pub.volume }}
+{% if pub.issue %}
+, n° {{ pub["issue"] }}
+{% endif %}
+({{ pub["year"] }})
+p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
+{% if pub.website %}
+</a>
+{% endif %}
+</journal>
+<br/>
+
+{% if pub.arxiv %}
+<journal>
+<a href="http://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{ pub.arxiv }}</a>
+</journal>
+<br/>
+{% endif %}
+
+{% if pub.abstract %}
+<abstract>
+{{ pub.abstract }}
+</abstract>
+{% endif %}
+</li>
+{% endfor %}
+</ol>
+</p>
+</div>
+
+<div class="section">
+<h2>Prépublications</h2>
+<p>
+<ul class="publi">
+{% for pub in prepublications %}
+<li>
+<titre>"{{ pub.title }}"</titre>
+<br/>
+
+{% if pub.arxiv %}
+<journal>
+<a href="http://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{pub.arxiv}}</a>
+</journal>
+<br/>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</p>
+</div>
+
+<div class="section">
+<h2>Articles de conférences</h2>
+<ol reversed="true" class="publi">
+{% for pub in conference_papers %}
+<li>
+{% if pub.coauthors %}
+<auteurs>with
+{% for author in pub.coauthors %}
+{{ author }}
+{% endfor %}
+</auteurs>
+{% endif %}
+<titre>"{{ pub.title }}"</titre>
+<br/>
+
+{% if pub.website %}
+<a href="{{ pub.website }}">
+{% endif %}
+{{ pub.name }}
+{% if pub.website %}
+</a>
+{% endif %}
+<br/>
+
+{% if pub.journal %}
+<journal>
+{% if pub.website %}
+<a href="{{ pub.website }}">
+{% endif %}
+{{ journals[pub.journal]['short-name'] }}
+{{ pub.volume }}
+{% if pub.issue %}
+, n° {{ pub.issue }}
+{% endif %}
+({{ pub.year }})
+p. {{ pub.pages[0] }}-{{ pub.pages[1] }}
+{% if pub.website %}
+</a>
+{% endif %}
+</journal>
+<br/>
+{% endif %}
+
+{% if pub.arxiv %}
+<journal>
+<a href="http://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{ pub.arxiv }}</a>
+</journal>
+<br/>
+{% endif %}
+
+{% if pub.abstract %}
+<abstract>
+{{ pub.abstract }}
+</abstract>
+{% endif %}
+</li>
+{% endfor %}
+</ol>
+</p>
+
+
+<p>
+Collaborateurs:
+<a href="http://w3.impa.br/~avila/">A. Avila</a>,
+J.-F. Bertazzon,
+<a href="http://www.liafa.jussieu.fr/~berthe/">V. Berth&eacute</a>,
+<a href="http://www.cmi.univ-mrs.fr/~hubert/">P. Hubert</a>,
+<a href="http://www.math.u-psud.fr/~lelievre/">S. Leli&egrave;vre</a>,
+<a href="http://w3.impa.br/~cmateus/">C. Matheus</a>,
+<a href="http://www.liafa.jussieu.fr/~marcovici/">I. Marcovici</a>,
+<a href="http://www.maths.bris.ac.uk/people/faculty/maxcu/">C. Ulcigrai</a>.
+</p>
+
+
+</div>  <!-- end of section -->
+
+<div class="section">
+<h2>Thèse</h2>
+<p>
+J'ai soutenu ma thèse sous la direction d'Arnaldo Nogueira le 16 Novembre 2011
+<a href="these_presentation.pdf">présentation au format pdf</a>. Mon mémoire est
+disponible en <a ref="Delecroix-these.pdf">version longue</a> (173 pages) et en <a href="Delecroix-these_courte.pdf">version courte</a> (57 pages).
+</p>
+</div>
+
+<div class="section">
+<h2>Groupes de travail</h2>
+<p>Au printemps 2014, j'ai animé des séances d'introduction au logiciel <a href="http://sagemath.org">Sage</a> à l'université de Bordeaux. Pour plus d'informations voir la <a href="http://wiki.sagemath.org/GroupeUtilisateursBordeaux">page wiki</a>.
+</p>
+
+<p>J'ai coorganisé avec <a href="http://www.cmi.univ-mrs.fr/~hubert/">Pascal Hubert</a> et <a href="http://www.cpt.univ-mrs.fr/~lanneau/">Erwan Lanneau</a> un <a href="gdt.html">groupe de travail sur les travaux de Benoist-Quint</a> (la page contient quelques notes de cours et des références).
+</p>
+<div>  <!-- end of section -->
+
+
+
+
+{% endblock %}

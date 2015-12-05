@@ -1,0 +1,105 @@
+body {
+}
+
+.publi {
+  line-height: 1.618em;
+}
+
+.publi auteurs{}
+.publi li
+{
+  margin-bottom: 1em;
+}
+.publi a
+{
+  text-decoration: none;
+  color: #101010;
+}
+.publi titre{
+  font-style: bold;
+  text-decoration: underline;
+}
+.publi journal{
+}
+.publi volume{
+  font-style: bold;
+}
+.publi number{
+}
+.publi year{
+}
+.publi pages{
+}
+.publi abstract{
+  font-style: italic;
+  color: #244052;
+}
+.publi abstract a {
+  color: #903030;
+}
+
+#top{
+}
+
+#left{
+  float:left;
+  width: 60%;
+}
+
+#menu ul{
+  line-height: 3em;
+}
+
+#menu ul li{
+  display: inline;
+  padding: .5em;
+}
+
+#menu a {
+  color: #0304a5;
+  background: #fbfbfb;
+  padding-top: .8em;
+  margin-top: 1em;
+  padding-bottom: .8em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+#menu .selected a {
+  color: #f00000;
+  background: #abfbab;
+}
+
+#photo{
+  float: right;
+  margin: 1%;
+  width: 25%;
+}
+
+#top h1{
+  color: #030363;
+}
+
+#main{
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+
+
+#bottom{
+  float: left;
+  width: 100%;
+}
+
+.section{
+  line-height: 1.5;
+  margin-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: justify;
+}
+
+.section .TD{
+  margin-bottom: 2.3em;
+}

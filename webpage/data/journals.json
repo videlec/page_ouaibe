@@ -1,0 +1,33 @@
+{
+  "AIF": {
+		  "short-name": "Ann. Inst. Fourier",
+          "full-name": "Annales de l'Institut Fourier",
+		  "website": "http://aif.cedram.org/"
+		  },
+
+  "AENS": {
+		  "short-name": "Ann. Sc. ENS",
+		  "full-name": "Annales scientifiques de l'École normale supérieure",
+		  "website": "http://www.math.ens.fr/edition/annales/"
+          },
+
+  "GeomDed": {
+          "short-name": "Geom. Ded.",
+		  "full-name": "Geometriae Dedicata",
+		  "website": "http://www.springer.com/mathematics/geometry/journal/10711"
+		   },
+
+  "JModDyn": {
+		  "short-name": "J. of Mod. Dyn.",
+		  "full-name": "Journal of Modern Dynamics",
+		  "website": "http://jmdmath.s3-website-us-east-1.amazonaws.com/"
+          },
+
+  "KokBes": {
+		  "short-name": "RIMS Kôkyûroku Bessatsu",
+		  "full-name": "RIMS Kôkyûroku Bessatsu",
+		  "website": "http://www.kurims.kyoto-u.ac.jp/~kenkyubu/bessatsu.html"
+  }
+
+}
+

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block title %}Programmation{% endblock %}
+{% block body %}
+
+<div class="section">
+<h2>flatsurf</h2>
+
+<p>
+Je travaille sur des algorithmes autour de la dynamique symbolique et
+la géométrie des surfaces. Je programme essentiellement pour le
+logiciel <a href="http://sagemath.org">Sage</a> mais participe aussi
+à d'autres projets comme <a href="http://pari.math.u-bordeaux.fr/">PARI/GP</a>
+ou <a href="http://mpir.org/">MPIR</a>.
+</p>
+
+<p>
+Je fait partie du projet européen <a href="http://opendreamkit.org/">OpenDreamKit</a>
+(Septembre 2015-Septembre 2019) dont une partie du financement est dédié au développement de Sage.
+</p>
+
+<p>
+Depuis la version 4.3.1 de Sage, on trouve des outils pour l'induction de Rauzy.
+J'ai également programmé une librairie "flatsurf" contenant beaucoup plus de choses.
+Vous pouvez l'installer en suivant <a href="README.txt">ces instructions</a>.
+Le package est disponible à l'adresse <a href="flatsurf-0.2.spkg">flatsurf-0.2.spkg</a>. Vous pouvez
+également accéder au code source en utilisant git
+<p align="center">
+<i>git clone https://daemon@git.math.cnrs.fr/anon/plm/delecroix/flatsurf</i>
+</p>
+</p>
+
+<h2>Quelques calculs</h2>
+<h3>Spectre de pseudo-Anosov calculé à partir des diagrammes de Rauzy</h3>
+<p>
+Ci-dessous vous trouverez des listes d'homéomorphismes pseudo-Anosov obtenus
+via l'induction de Rauzy dans les strates H(2) et H(1,1). On y trouve
+les polyonmes caractéristiques de l'action dans l'homologie.
+<ul>
+  <li>
+	<img src="hyp_2_rauzy_diagram_picture.png" height=100 width=100/>
+     H_hyp(2)
+	<ul>
+	<li><a href="hyp_2_rauzy_diagram.txt">le diagramme de rauzy</a></li>
+	<li><a href="hyp_2_spectra_with_substitutions.txt">liste des spectres</a></li>
+    </ul>
+  </li>
+  
+  <li>
+    <img src="hyp_1_1_rauzy_diagram_picture.png" height=100 width=100/> H_hyp(1,1)
+	<ul> 
+	  <li><a href="hyp_1_1_rauzy_diagram.txt">le diagramme de Rauzy</a></li>
+	  <li><a href="hyp_1_1_spectra_with_substitutions.txt">liste des spectres</a></li>
+    </ul>
+  </li>
+  
+</ul>
+A partir de ces données, on peut étudier les difféomorphismes pseudo-Anosov pour lesquels l'action dans l'homologie a deux valeurs propres 1 (autrement dit cette matrice preserve un sous-espace de dimension 2). Les premiers exemples dans la strate H(2), partant de la permutation <i>a b c d/d c b a</i>, sont:
+<ul>
+  <li><b>tttbtbtbtb</b> : longueur 10, dilatation 3/2*sqrt(5) + 7/2 ~ 6.854,</li>
+  <li><b>ttbtbttbttb</b> : longueur 11, dilatation sqrt(15) + 4 ~ 7.873,</li>
+  <li><b>ttbtbttbtttb</b> : longueur 12, dilatation 1/2*sqrt(77) + 9/2 ~ 8.887,</li>
+  <li><b>tttbtbtttbtb</b> : longueur 12, dilatation 3/2*sqrt(13) + 11/2 ~ 10.908,</li>
+  <li><b>tttbtbbtbttb</b> : longueur 12, dilatation sqrt(35) + 6 ~ 11.916.</li>
+</ul>
+</p>
+
+
+<h3>Le vent dans les arbres</h3>
+<p>
+Pour dessiner les trajectoires du billard appelé le vent dans les arbres, j'ai écrit un
+petit <a href="windtree_pictures.py">script Python</a>. Il m'a permis d'illustrer
+certains articles et de dessiner la figure suivante qui représente une trajectoire de billard 
+(image sous <a href="https://creativecommons.org/licenses/by-sa/3.0/">licence libre</a>): <br>
+<img src="windtree.png" width="90%" height="90%"/>
+<br>
+Ce dernier est facile à utiliser, mais si vous rencontrez des problèmes dans son utilisation
+n'hésitez pas à m'envoyer un courriel.
+</p>
+</div>
+
+
+
+<h2>Quelques liens</h2>
+<p>
+Si vous voulez apprendre à vous servir du logiciel de math <a href="http://sagemath.org">Sage</a> je vous conseille les livres (libres) suivants
+<ul>
+  <li><a href="http://sagebook.gforge.inria.fr/">"Calcul math&eacute;matique avec Sage"</a> 
+  de A. Camassayou, G. Connan, T. Dumont, L. Fousse, F. Maltey, M. Meulien, M. Mezzarobba, C. Pernet, N. Thierry et P. Zimmermann (en francais)</li>
+  <li><a href="http://wstein.org/ent/">"Elementary number theory: primes, congruences and secrets"</a>
+  de William Stein (en anglais)</li>
+  <li><a href="http://code.google.com/p/graph-theory-algorithms-book/">"graph-theory-algorithms-book"</a>
+  de David Joyner, Minh Van Nguyen, et Nathann Cohen (en anglais).</li>	
+</ul>
+</p>
+
+
+<p>
+Le développement des libraries sur la dynamique des échanges d'intervalles et
+des surfaces de translation s'organise en collaboration dans les wikis
+suivants
+<ul>
+  <li><a href="http://lma.metelu.net/FlatSurfaces/FlatSurfaces">Flat
+	  surfaces wiki</a>: un wiki sur les surfaces plates qui va bien au del&agrave; de
+	la programmation (un dictionnaire de surfaces concr&egrave;tes, comment
+	faire des exp&eacute;riences, ...)</li>
+	<li><a href="http://wiki.sagemath.org/dynamics">dynamics in Sage</a>: tout
+	ce qui concerne la dynamique dans Sage</li>
+	<li><a href="http://wiki.sagemath.org/dynamics/FlatSurfaces">FlatSurfaces</a>:
+	tout ce qui concerne les surfaces plates dans Sage</li>
+</ul>
+</p>
+
+<p>
+Sage marche principalement sous Unix mais vous pouvez utiliser la <a href="http://sagedebianlive.metelu.net/">clé USB live</a>.
+</p>
+
+<h2>Mon travail dans Sage</h2>
+<p>
+Pour un aperçu de mon travail dans Sage, allez voir <a href="http://trac.sagemath.org/query?author=~Vincent+Delecroix&or&reviewer=~Vincent+Delecroix&col=id&col=summary&col=component&col=status&col=milestone&order=milestone">les tickets auxquels j'ai particip&eacute;</a>.
+</p>
+
+<p>
+Quelques <a href="http://wiki.sagemath.org/Workshops">Sage days</a> que j'ai organisés ou auxquels j'ai participés
+<ul>
+<li><a href="http://wiki.sagemath.org/daysmarseille">Sage days 20</a> à Marseille (France)</li>
+<li><a href="http://wiki.sagemath.org/days28">Sage days 28</a> à Orsay (France)</li>
+<li><a href="http://wiki.sagemath.org/days34.5">Sage days 34.5</a> à Bobo-Dioulasso (Burkina Faso)</li>
+<li><a href="http://wiki.sagemath.org/sagedaysACD">Sage days 45</a> à Providence (Rhode Island, &Eacute;tats-Unis)</li>
+<li><a href="http://wiki.sagemath.org/sagedaysACD">Sage days 55</a> à Melbourne (Floride, &Eacutes;tats-Unis)</li>
+<li><a href="http://wiki.sagemath.org/days57">Sage days 57</a> à Cernay la ville (France)</a>
+<li><a href="http://wiki.sagemath.org/days66">Sage days 66</a> à Liège (Belgique)</li>
+<li><a href="http://wiki.sagemath.org/days66">Sage days 73</a> à Oaxaca (Mexique)</l>
+</ul>
+</p>
+
+{% endblock %}

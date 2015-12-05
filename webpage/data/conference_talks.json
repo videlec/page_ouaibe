@@ -1,0 +1,106 @@
+[
+ {
+  "date": "2014-05-15",
+  "city": "Torun",
+  "country": "Pologne",
+  "name": "Ergodic theory and dynamical systems"
+ },
+
+ {
+  "date": "2014-08-24",
+  "city": "Oberwolfach",
+  "country": "Allemagne",
+  "title": "Cries and whispers in generalized windtree models"
+ },
+
+ {
+  "date": "2014-01-20",
+  "city": "Toulouse",
+  "country": "France",
+  "name": "Holomorphic and symbolic dynamics",
+  "title": "Teichmüller spaces as parameter spaces for translation flows"
+  },
+
+ {
+  "date": "2013-11-00",
+  "where": "ICERM",
+  "city": "Providence",
+  "country": "United States, Rhode Island",
+  "title": "Weak-mixing in Veech surfaces"
+ },
+
+ {
+   "date": "2012-12-17",
+   "city": "Karlsruhe",
+   "country": "Allemagne",
+   "title": "Diagonal changes in hyperelliptic strata",
+   "name": "10. Karlsruher Weihnachtsworkshop 2012 in the honour of Frank Herrlich's 60th birthday"
+  },
+
+  {
+   "date": "2012-12-13",
+   "city": "Louvain",
+   "country": "Belgique",
+   "title": "S-adic graphs and their Lyapunov exponents: global complexity of languages, deviations of birkhoff sums and balanceness of languages",
+   "website": "http://sites.uclouvain.be/JM2012/FR_programme.html",
+   "name": "14èmes Journées Montoises d'informatique théorique"
+  },
+
+  {
+   "date": "2012-06-06",
+   "city": "Kyoto",
+   "country": "Japon",
+   "title": "(Global) complexity of S-adic systems",
+   "beamer": "beamer_kyoto2012.pdf",
+   "website": "https://sites.google.com/site/numeration2012/",
+   "name": "Numération 2012"
+  },
+
+  {
+   "date": "2011-12-08",
+   "city": "Moscou",
+   "country": "Russie",
+   "title": "Diffusion coefficient of periodic billiards in the plane",
+   "website": "http://www.mccme.ru/lifr/conf2011/index.html",
+   "name": "Flows on surfaces, symbolic dynamics and dynamics in moduli spaces dedicated to the 75th birthday of D. V. Anosov"
+  },
+
+ {
+  "date": "2011-07-18",
+  "city": "Bedlewo",
+  "country": "Pologne",
+  "title": "Recurrence and diffusion in the wind-tree model",
+  "website": "http://bcc.impan.pl/11Dynamics/",
+  "name": "Modern Dynamics and its Interaction with Analysis, Geometry and Number Theory"
+ },
+
+ {
+  "date": "2011-08-05",
+  "city": "Oberwolfach",
+  "country": "Allemagne",
+  "title": "Diffusion rate in the wind-tree model",
+  "beamer": "windtree_abstract-oberwolfach2011.pdf"
+ },
+
+ {
+  "date": "2011-02-07",
+  "city": "Perpignan",
+  "country": "France",
+  "title": "Trajectoires divergentes du vent dans les arbres",
+  "beamer": "beamer_RAIM2011.pdf",
+  "website": "http://webdali.univ-perp.fr/raim11/index.php",
+  "name": "RAIM'11 : 4es Rencontres Arithmétique de l'Informatique Mathématique"
+ },
+
+ {
+  "date": "2010-02-26",
+  "where": "CIRM",
+  "city": "Marseille",
+  "country": "France",
+  "name": "mois Tématique math-info 2011",
+  "title": "Rauzy graphs and Rauzy diagrams",
+  "website": "http://www2.lirmm.fr/arith/wiki/MathInfo2010-fr/MathInfo2010"
+ }
+
+]
+

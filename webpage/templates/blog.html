@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="section">
+<h2>Misc</h2>
+
+<ul>
+{% for blog in blog_posts %}
+<li> <a href="{{ blog.url }}">{{ blog.title }}</a> (dernière modification {{ blog.lastmodif }}</li>
+{% endfor %}
+</ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+
+<html>
+
+<head>
+<title>Page personelle de Vincent Delecroix </title>
+<meta charset="utf-8">
+<meta name="author" content="Vincent Delecroix">
+<meta name="language" content="fr">
+<meta name="description" content="Page personnelle de Vincent Delecroix, chercheur en informatique au sein du Laboratoire Bordelais en Informatique (LaBRI)">
+<meta name="keywords" content="mathematiques, informatique, vincent, delecroix, echanges d'intervalles, involution lineaires">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>{% block title %}Default title{% endblock %}</title>
+{% block extra_header %}{% endblock %}
+</head>
+
+<body>
+
+<div id="photo"> <img src="photo.jpg" alt="photo"/> </div>
+
+<div id="left">
+<h1> Vincent Delecroix </h1>
+<hr>
+
+<div id="menu">
+<ul>
+{% for page in pages %}
+<li>
+<span class="{{ page.status }}">
+<a href="{{ page.link }}">
+{{ page.name }}
+</a></span>
+</li>
+{% endfor %}
+</ul>
+</div>  <!-- end menu -->
+
+<div id="main">
+{% block body %}
+My body
+{% endblock %}
+</div>
+</div>  <!-- end left -->
+
+</body>
+</html>

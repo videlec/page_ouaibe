@@ -1,0 +1,18 @@
+[
+ {
+  "coauthors": ["D. Perrin", "V. Berthe", "C. De Felice", "J. Leroy", "C. Reutenauer", "G. Rindone"],
+  "title": "Specular sets",
+  "website": "http://words2015.uni-kiel.de/",
+  "name": "Words 2015",
+  "arxiv": "1505.00707"
+ },
+
+ {
+  "coauthors": ["T. Hejda", "W. Steiner"],
+  "title": "Balancedness of Arnoux-Rauzy and Brun words",
+  "website": "http://www.math.utu.fi/words13/",
+  "name": "Words 2013",
+  "arxiv": "1308.6694",
+  "doi": "10.1007/978-3-642-40579-2_14"
+ }
+]

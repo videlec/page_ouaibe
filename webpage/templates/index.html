@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Présentation{% endblock %}
+{% block body %}
+
+  <div class="section">
+  <h2>Présentation</h2>
+  {{ general_presentation }}
+
+  {{ research_description }}
+
+  <h2>A propos</h2>
+  <p>
+  Ce site ouaibe est bricolée à partir du langage <a href="https://www.python.org/">Python</a>
+  et des librairies
+  <a href="https://docs.python.org/2/library/json.html">json</a>,
+  <a href="http://pythonhosted.org/Markdown/siteindex.html">markdown</a> et
+  <a href="http://jinja.pocoo.org/">jinja</a>.
+  </p>
+
+  </div>
+{% endblock %}

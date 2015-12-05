@@ -1,0 +1,265 @@
+[
+  {
+   "title": "Grandes déviations pour le flot de Teichmüller",
+   "date": "2014-05-07",
+   "city": "Paris",
+   "land": "France",
+   "place": "IHP",
+   "name": "séminaire Géométrie et dynamique dans les espaces de modules"
+  },
+
+  {
+   "title": "Changement de diagonales dans les quadrangulations",
+   "date": "2014-02-28",
+   "city": "Grenoble",
+   "name": "groupe de travail surfaces de translation"
+  },
+
+  {
+   "date": "2014-02-07",
+   "name": "séminaire de Géométrie",
+   "city": "Nantes",
+   "country": "France",
+   "title": "diffusion dans le modèle d'Ehrenfest périodique "
+  },
+
+  {
+   "date":  "2013-05-24",
+   "name": "séminaire combinatoire énumérative et algébrique",
+   "where": "LaBRI",
+   "city": "Bordeaux",
+   "country": "France",
+   "title": "Une fraction continue géométrique"
+  },
+
+  {
+   "date": "2013-04-26",
+   "name": "séminaire de Géométrie",
+   "where": "IMB",
+   "city": "Bordeaux",
+   "country": "France",
+   "title": "Mélange faible pour le billard dans les polygones réguliers"
+  },
+
+  {
+   "date": "2013-03-27",
+   "name": "groupe de travail ARITH",
+   "where": "LIRMM",
+   "city": "Montpellier",
+   "country": "France",
+   "title": "Complexité globale des systèmes S-adiques"
+  },
+
+  {
+   "date": "2013-03-25",
+   "name": "séminaire de théorie ergodique d'Orsay",
+   "where": "Orsay",
+   "country": "France",
+   "title": "Mélange faible des billards dans les polygones réguliers"
+  },
+
+  {
+   "date": "2013-03-07",
+   "name": "séminaire de théorie spectrale",
+   "where": "Université Joseph Fourier",
+   "city": "Grenoble",
+   "country": "France",
+   "title": "Billards rationnels et renormalisation"
+  },
+
+  {
+   "date": "2013-02-26",
+   "name": "dynamics seminar",
+   "city": "Chicago",
+   "country": "United States, Illinois",
+   "title": "Dynamics of the wind-tree model"
+  },
+
+  {
+   "date": "2013-02-25",
+   "name": "dynamics seminar",
+   "where": "University of Chicago",
+   "city": "Chicago",
+   "country": "United States, Illinois",
+   "title": "Weak-mixing for billiards in regular polygons"
+  },
+
+  {
+   "date": "2013-02-05",
+   "name": "séminaire de th&eacute;orie ergodique",
+   "where": "LPMA",
+   "country": "Paris",
+   "country": "France",
+   "title": "Mélange faible du billard dans un polygone régulier"
+  },
+
+  {
+  "date": "2013-01-16",
+  "name": "séminaire de théorie ergodique et systèmes dynamiques de Villetaneuse",
+  "where": "LAGA",
+  "city": "Villetaneuse",
+  "country": "France",
+  "title": "Mélange faible dans les surfaces de Veech"
+  },
+
+  {
+   "date": "2012-12-04",
+   "name": "Combinatorial and Algebraic Structures seminar",
+   "city": "Prague",
+   "country": "République tchèque",
+   "title": "Global complexity of S-adic systems"
+  },
+
+  {
+   "date": "2012-11-23",
+   "name": "séminaire Teich",
+   "city": "Marseille",
+   "country": "France",
+   "title": "Mélange faible dans les surfaces de Veech"
+  },
+
+  {
+   "date": "2012-04-17",
+   "name": "séminaire probabilité et théorie ergodique",
+   "where": "LAMFA",
+   "city": "Amiens",
+   "country": "France",
+   "title": "Billards rationnels périodiques dans le plan. Le cas du modèle d'Ehrenfest."
+  },
+
+  {
+   "date": "2012-03-30",
+   "where": "Université fédérale de Niteroi",
+   "city": "Niteroi",
+   "country": "Brésil",
+   "title": "Infinite rational billiard and Teichmueller theory"
+ },
+
+ {
+  "date": "2012-02-22",
+  "name": "groupe de travail ARITH",
+  "where": "LIRMM",
+  "country": "Montpellier",
+  "title": "Diagrammes de Rauzy. Fraction continues et géométrie des surfaces"
+ },
+
+ {
+  "date": "2012-01-27",
+  "name": "séminaire Géométrie Dynamique",
+  "where": "Laboratoire Paul Painlevé",
+  "city": "Lille",
+  "country": "France",
+  "title": "Billards périodiques dans le plan"
+ },
+
+ {
+  "date": "2012-01-18",
+  "name": "séminaire Dynamique quantique et classique",
+  "where": "CPT",
+  "city": "Marseille",
+  "country": "France",
+  "title": "Dynamique des billards périodiques"
+ },
+
+ {
+  "date": "2012-01-13",
+  "name": "séminaires Automates",
+  "where": "LIAFA",
+  "city": "Paris",
+  "country": "France",
+  "title": "Trajectoires divergentes du vent dans les arbres"
+ },
+
+ {
+  "date": "2011-12-13",
+  "name": "Combinatorial and Algebraic Structures Seminar",
+  "city": "Prague",
+  "country": "République tchèque",
+  "tite": "Divergent trajectories in a windtree model",
+  "beamer": "beamer_prague2011.pdf"
+  },
+
+  {
+   "date": "2011-12-01",
+   "name": "Ergodic Theory and Dynamical Systems seminar",
+   "where": "Bristol",
+   "country": "England",
+   "title": "Recurrence and diffusion for the periodic windtree model"
+  },
+
+  {
+   "date": "2011-11-25",
+   "name": "séminaire de systèmes dynamiques",
+   "where": "IMJ",
+   "city": "Paris",
+   "country": "France",
+   "title": "Le vent dans les arbres"
+  },
+
+  {
+   "date": "2011-11-08",
+   "name": "séminaire de théorie ergodique",
+   "where": "LPMA",
+   "city": "Paris",
+   "country": "France",
+   "title": "Trajectoires divergentes du vent dans les arbres"
+  },
+
+  {
+   "date": "2011-10-12",
+   "name": "théorie ergodique et systèmes dynamiques",
+   "city": "Villetaneuse",
+   "where": "LAGA",
+   "city": "Villetaneuse",
+   "country": "France"
+  },
+
+ {
+  "date": "2011-05-02",
+  "name": "séminaire de théorie ergodique",
+  "where": "IRMAR",
+  "city": "Rennes",
+  "country": "France"
+ },
+
+ {
+  "date": "2010-12-09",
+  "name": "séminaire Géomètrie - Topologie Dynamique",
+  "city": "Orsay",
+  "title": "Diffusion du vent dans les arbres"
+ },
+
+ {
+  "date": "2010-10-23",
+  "where": ""séminaire Teich",
+  "city": "Marseille",
+  "country": "France",
+  "title": "Diffusion du vent dans les arbres"
+ },
+
+ {
+  "date": "2010-01-14",
+  "where": "CPT",
+  "name": "rendez-vous des thésards",
+  "city": "Marseille",
+  "title": "Dans un billard"
+ },
+
+ {
+  "date": "2009-12-08",
+  "where": "IML",
+  "city": "Marseille",
+  "country": "France",
+  "title": "Comptage des classes de Rauzy"
+ },
+
+ {
+  "date": "2009-12-10",
+  "where": "LIF",
+  "country": "Marseille",
+  "city": "France",
+  "title": "Classification de billards. Comptages",
+  "beamer": "beamer_lif2009.pdf"
+ }
+]
+

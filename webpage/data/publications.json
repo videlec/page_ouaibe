@@ -1,0 +1,68 @@
+[ 
+  {
+   "title": "Diagonal changes in hyperelliptic components. A natural extension to Ferenczi-Zamboni induction",
+   "coauthors": ["C. Ulcigrai"],
+   "journal": "GeomDed",
+   "year": 2015,
+   "month": 6,
+   "volume": 176,
+   "issue": 1,
+   "pages": [117,174],
+   "website": "http://link.springer.com/article/10.1007/s10711-014-9961-7",
+   "arxiv": "1310.1052",
+   "doi": "10.1007/s10711-014-9961-7",
+   "abstract": "In this article, we introduce an induction scheme for translation surfaces in hyperelliptic strata. It can be considered as a geometric counterpart to Ferenczi-Zamboni construction (<a href=\"http://link.springer.com/article/10.1007/s11854-010-0031-2\">J. Analyse Math. 112 (2010)</a>)"
+  },
+
+  {
+  "title": "Beyond substitutive dynamical systems: S-adic expansions",
+  "coauthors": ["V. Berthé"],
+  "journal": "KokBes",
+  "volume": "B46",
+  "year": 2014,
+  "pages": [81, 123],
+  "arxiv": "1309.3960",
+  "abstract": "<a href=\"http://en.wikipedia.org/wiki/Self-similarity\">Self-similar</a> dynamical systems are example of highly structured dynamical systems. But there are much more systems of low complexity. One way to consider all of them is to slightly weaken the notion of self-similarity: we allow to see different patterns at different scales but all of them belong to a fixed family. The combinatorial counterpart of this construction are the so-called S-adic systems."
+  },
+
+  {
+   "title": "Diffusion for the periodic wind-tree model",
+   "year": 2014,
+   "coauthors": ["P. Hubert", "S. Lelièvre"],
+   "journal": "AENS",
+   "volume": 47,
+   "issue": 6,
+   "pages": [1085, 1110],
+   "arxiv": "1107.1110",
+   "website": "http://smf4.emath.fr/Publications/AnnalesENS/4_47/html/ens_ann-sc_47_1085-1110.php",
+   "year": 2014,
+   "abstract": "The wind-tree model is a billiard in the plane where scatterers are rectangles randomly displaced. We study a periodic version and prove that the diffusion rate is 2/3. More precisely the maximum distance reached by a particule before time T is around T^(2/3). It makes a large difference with random walks in the plane for which that quantity equals T^(1/2)."
+  },
+
+  {
+   "title": "Divergent directions in some periodic wind-tree models",
+   "year": 2013,
+   "journal": "JModDyn",
+   "volume" : 7,
+   "issue": 1,
+   "pages": [1,29],
+   "arxiv": "1107.2418",
+   "doi": "10.3934/jmd.2013.7.1",
+   "website": "http://aimsciences.org/journals/contentsListJMDnew.jsp?pubID=604",
+   "abstract": "We prove that for many choice of rectangular obstacles, there exists divergent directions in the windtree model."
+  },
+
+  {
+   "title": "Cardinality of Rauzy classes",
+   "year": 2013,
+   "journal": "AIF",
+   "volume": 63,
+   "issue": 5,
+   "pages": [1651,1715],
+   "arxiv": "1106.0807",
+   "doi": "10.5802/aif.2811",
+   "website": "http://aif.cedram.org/aif-bin/fitem?id=AIF_2013__63_5_1651_0",
+   "abstract": "Rauzy classes are set of permutations that appear in a renormalization scheme of <a href=\"http://en.wikipedia.org/wiki/Interval_exchange_transformation\">interval exchange transformations</a> introduced by Rauzy and further studied by Veech. In this article we provide a formula for the cardinalities of Rauzy classes and make a conjecture about their asymptotics."
+  }
+]
+
