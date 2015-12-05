@@ -24,6 +24,8 @@ env = Environment(loader=PackageLoader('webpage', 'templates'))
 
 DATA_DIR = 'webpage/data/'
 ARTICLES_DIR = 'webpage/articles/'
+STATIC_DIR = 'webpage/static/'
+OUTPUT_DIR = 'output/'
 
 def article_list():
     articles = []
@@ -35,6 +37,21 @@ def article_list():
         articles.append((os.path.getmtime(filename), filename))
     articles.sort()
     return articles
+
+# copy files from the static dir that are not already in the output one
+for name in os.listdir(STATIC_DIR):
+    static_filename = os.path.join(STATIC_DIR, name)
+    output_filename = os.path.join(OUTPUT_DIR, name)
+
+    static_mtime = os.path.getmtime(static_filename)
+    try:
+        output_mtime = os.path.getmtime(output_filename)
+    except OSError:
+        output_mtime = 0.0
+
+    if static_mtime > output_mtime:
+        print "Copy static file {}".format(name)
+        shutil.copy(static_filename, output_filename)
 
 data = {}
 for kind in ["journals",
@@ -56,7 +73,9 @@ for mtime, article in article_list():
     name = os.path.splitext(os.path.split(article)[-1])[-2]
     print "Loading blog post {}".format(name)
     with codecs.open(article, encoding='utf-8') as f:
-        title = f.readline()
+        title = None
+        while not title or title.isspace() or title.startswith('[comment]'):
+            title = f.readline()
     mtime = datetime.datetime.fromtimestamp(mtime)
     blog_posts.append({'name': name,
                        'path': article,
@@ -95,8 +114,6 @@ for blog in blog_posts:
     input_filename = blog['path']
     name = blog['name']
     output_filename = os.path.join('output', name + '.html')
-
-    shutil.copy(input_filename, 'output/')
 
     print "process blog '{}' last modified on {}".format(name, blog['lastmodif'])
 

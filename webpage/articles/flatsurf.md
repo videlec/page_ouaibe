@@ -1,3 +1,7 @@
+[comment]: # (Copyright 2015 Vincent Delecroix <vincent.delecroix@labri.fr>)
+[comment]: # (Cet article est publié sous la licence Creative Commons Attribution-NonCommercial 4.0 International License.)
+[comment]: # (This article is published under the Creative Commons Attribution-NonCommercial 4.0 International License)
+
 flatsurf package overview
 =========================
 
