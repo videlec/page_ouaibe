@@ -10,19 +10,41 @@ from Samuel Lelièvre) to deal with translation surfaces. In order to install it
 
     $ sage -p http://www.labri.fr/perso/vdelecro/flatsurf-0.2.spkg
 
-Or you can follow the more detailed instructions from the [README](README.txt).
+Or you can follow the more detailed instructions from the file [README](README.txt).
 
-In this article I briefly describe its usage.
+You can also clone the code source using git
+
+    git clone https://daemon@git.math.cnrs.fr/anon/plm/delecroix/flatsurf
+
+In this article I briefly describe the usage of the package.
 
 General usage
 -------------
 
-In order to use the code available in the package (and after you install it) you need
-to enter the following line
+Once it is installed on your computer and Sage is launched, you need to enter
+the following
 
     :::pycon
     >>> from surface_dynamics.all import *
 
+It makes accessible a lot of new commands (like `iet`, `AbelianStratum`, `QuadraticStratum`,
+`CylinderDiagram`, `Origami` and `OrigamiDatabase`). Recall that to access the documentation
+within Sage you need to put a question mark after the command and press enter
+
+    :::pycon
+    >>> Origami?
+    Signature:      Origami(r, u, sparse=False, check=True, as_tuple=False, positions=None, name=None)
+    Docstring:
+
+      Constructor for origami
+
+      INPUT:
+
+      * "r", "u" - two permutations
+
+      ...
+
+Most of the functions in the package are well documented together with examples.
 
 Strata and Interval exchange transformations
 --------------------------------------------
@@ -43,6 +65,7 @@ The package contains a lot of code to deal with interval exchange transformation
 
 You can also get one permutation from a given stratum component
 
+    :::pycon
     >>> A = AbelianStratum(4,4)
     >>> cc = A.odd_component()
     >>> cc.permutation_representative()
@@ -62,10 +85,11 @@ You can also get one permutation from a given stratum component
 It is possible to build the coding of a self-similar interval exchange transformation
 using periodic paths in the Rauzy diagram.
 
+    :::pycon
     >>> p = iet.Permutation('a b c d', 'd c b a')
     >>> R = p.rauzy_diagram()
     >>> g = R.path(p, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1)
-    >>> s = g.substitution
+    >>> s = g.substitution()
     >>> s
     WordMorphism: a->adbbd, b->adbbdbbd, c->adbcbcbd, d->adbcbd
     >>> s.fixed_point('a')
@@ -75,6 +99,7 @@ In the path `0` corresponds to top Rauzy induction and `1` to bottom. The above 
 is exceptional since there are two eigenvalues `1` (while the generic spectrum is simple
 by Avila-Viana)
 
+    :::pycon
     >>> g.matrix().eigenvalues()
     [1, 1, 0.1458980337503155?, 6.854101966249684?]
 
@@ -93,6 +118,7 @@ to the constructor `Origami`
 
 By convention the permutation are named `r` (for right) and `u` (for up)
 
+    :::pycon
     >>> o.r()
     (1,2)
     >>> o.u()
@@ -165,6 +191,7 @@ database and can also be read from other programs.
 
 To get the list of columns available in the database you can do
 
+    :::pycon
     >>> D.cols()
     ['representative',
      'stratum',
@@ -175,3 +202,33 @@ To get the list of columns available in the database you can do
      'hyperelliptic',
      ...
      'automorphism_group_name']
+
+Each column is available for display
+
+    :::pycon
+    >>> q = D.query(stratum=AbelianStratum(2))
+    >>> q.cols
+    >>> D = OrigamiDatabase()
+    >>> q = D.query(('stratum', '=', AbelianStratum(2)), ('nb_squares', '<', 15))
+    >>> q.cols('nb_squares', 'veech_group_level', 'teich_curve_nu2',
+    ... 'teich_curve_nu3', 'teich_curve_genus', 'monodromy_name')
+    >>> q.show()
+    Nb squares           vg level             Teich curve nu2      Teich curve genus    Monodromy           
+    ---------------------------------------------------------------------------------------------
+    3                    2                    1                    0                    S3
+    4                    12                   1                    0                    S4
+    5                    60                   0                    0                    S5
+    5                    15                   1                    0                    A5
+    6                    60                   0                    0                    S6
+    7                    420                  2                    0                    S7
+    7                    105                  0                    0                    A7
+    8                    840                  2                    1                    S8
+    9                    630                  3                    0                    A9
+    9                    2520                 0                    2                    S9
+    10                   2520                 0                    4                    S10
+    11                   6930                 0                    3                    A11
+    11                   27720                3                    6                    S11
+    12                   27720                4                    11                   S12
+    13                   90090                3                    7                    A13
+    13                   360360               0                    14                   S13
+    14                   360360               0                    25                   S14

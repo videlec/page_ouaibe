@@ -8,6 +8,6 @@ hyperbolique ou non-uniformément hyperbolique.
 
 
 Je suis actuellement chargé de recherche au
-[LaBRI](http://www.labri.fr/) à Bordeaux. Cepandant, je passe l'année
+[LaBRI](http://www.labri.fr/) à Bordeaux. Cependant, je passe l'année
 2015-2016 au [CMM à Santiago du
 Chili](https://www.cmm.uchile.cl/?cmm_people=vincent-delecroix).
