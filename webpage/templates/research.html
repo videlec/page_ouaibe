@@ -22,7 +22,7 @@
 
 <journal>
 {% if pub.website %}
-<a href="$pub["website"]">
+<a href="{{ pub.website }}">
 {% endif %}
 {{ journals[pub.journal]['short-name'] }}
 {{ pub.volume }}
@@ -134,19 +134,6 @@ p. {{ pub.pages[0] }}-{{ pub.pages[1] }}
 </li>
 {% endfor %}
 </ol>
-</p>
-
-
-<p>
-Collaborateurs:
-<a href="http://w3.impa.br/~avila/">A. Avila</a>,
-J.-F. Bertazzon,
-<a href="http://www.liafa.jussieu.fr/~berthe/">V. Berth&eacute</a>,
-<a href="http://www.cmi.univ-mrs.fr/~hubert/">P. Hubert</a>,
-<a href="http://www.math.u-psud.fr/~lelievre/">S. Leli&egrave;vre</a>,
-<a href="http://w3.impa.br/~cmateus/">C. Matheus</a>,
-<a href="http://www.liafa.jussieu.fr/~marcovici/">I. Marcovici</a>,
-<a href="http://www.maths.bris.ac.uk/people/faculty/maxcu/">C. Ulcigrai</a>.
 </p>
 
 </div>  <!-- end of section -->

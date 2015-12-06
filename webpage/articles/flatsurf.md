@@ -10,11 +10,7 @@ from Samuel Lelièvre) to deal with translation surfaces. In order to install it
 
     $ sage -p http://www.labri.fr/perso/vdelecro/flatsurf-0.2.spkg
 
-Or you can follow the more detailed instructions from the file [README](README.txt).
-
-You can also clone the code source using git
-
-    git clone https://daemon@git.math.cnrs.fr/anon/plm/delecroix/flatsurf
+You will find more detailed installation instructions in the file [README.txt](README.txt).
 
 In this article I briefly describe the usage of the package.
 
@@ -22,12 +18,12 @@ General usage
 -------------
 
 Once it is installed on your computer and Sage is launched, you need to enter
-the following
+the following command
 
     :::pycon
     >>> from surface_dynamics.all import *
 
-It makes accessible a lot of new commands (like `iet`, `AbelianStratum`, `QuadraticStratum`,
+It makes accessible a lot of new objects (like `iet`, `AbelianStratum`, `QuadraticStratum`,
 `CylinderDiagram`, `Origami` and `OrigamiDatabase`). Recall that to access the documentation
 within Sage you need to put a question mark after the command and press enter
 
@@ -135,6 +131,15 @@ There are also some predefined origamis that are accessible via `origamis`
     >>> ew.r()
     (1,2,3,4)(5,6,7,8)
 
+And it is also possible to build them from strata
+
+    :::pycon
+    >>> A = AbelianStratum(2,2)
+    >>> cc = A.odd_component()
+    >>> cc.one_origami(12)
+    (1,2,3,4,5,6)
+    (1,6)(2)(3,4)(5)
+
 You can then compute many invariants
 
     :::pycon
@@ -232,3 +237,49 @@ Each column is available for display
     13                   90090                3                    7                    A13
     13                   360360               0                    14                   S13
     14                   360360               0                    25                   S14
+
+You can get some information about the filling of the database with
+
+    :::pycon
+    >>> D.info(genus=3)
+    genus 3
+    =======
+     H_3(4)^hyp   : 163 T. curves (up to 51 squares)
+     H_3(4)^odd   : 118 T. curves (up to 41 squares)
+     H_3(3, 1)^c  :  72 T. curves (up to 25 squares)
+     H_3(2^2)^hyp : 280 T. curves (up to 33 squares)
+     H_3(2^2)^odd : 390 T. curves (up to 30 squares)
+     H_3(2, 1^2)^c: 253 T. curves (up to 20 squares)
+     H_3(1^4)^c   : 468 T. curves (up to 20 squares)
+
+
+    Total: 1744 Teichmueller curves
+
+More
+----
+
+If you have any doubt, question or request, send me an e-mail and I will update
+this document.
+
+Note that the package is by no mean complete. There are plenty of things under
+development and/or integration. And your help is welcome:
+
+ * interactive plotting (see the code in [this github repository](https://github.com/videlec/sage-flatsurf) written by Pat Hooper and me)
+
+ * enumeration of pseudo-Anosov
+
+ * enumeration of saddle connections and cylinder decompositions (Alex Eskin program)
+
+ * code for testing minimality of an algebraic interval exchange (Michael Boshernitzan algorithm)
+
+ * \( \operatorname{SL}(2, \mathbb{R}) \)-orbit closure of translation surfaces
+
+ * monodromy representation of origamis (i.e. the morphism \( \operatorname{SL}(2, \mathbb{Z}) \to \operatorname{Sp}(2g, \mathbb{Z}) \))
+
+ * more Lyapunov exponents (Charles Fougeron program)
+
+ * ...
+
+The code is publicly available, you can clone the code source using git
+
+    git clone https://daemon@git.math.cnrs.fr/anon/plm/delecroix/flatsurf
