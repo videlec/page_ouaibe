@@ -173,6 +173,23 @@ You can then compute many invariants
     >>> ew.sum_of_lyapunov_exponents()
     1
 
+If you are interested in some statistics of a Teichmüller curve you can
+iterate through the origamis it contains. For example we study the
+distribution of the number of cylinders in all Teichmüller curves of
+the component \( H^{odd}(4) \) (genus 3) with 11 squares
+
+    :::pycon
+	>>> for T in cc.arithmetic_teichmueller_curves(11):
+    ...     cyls = [0]*3
+    ...     for o in T:
+    ...         n = len(o.cylinder_decomposition())
+    ...         cyls[n-1] += 1
+    ...     print cyls
+    [1474, 4310, 2016]
+    [110, 0, 90]
+    [1650, 636, 1114]
+
+
 The origami database
 --------------------
 
