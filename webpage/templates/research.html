@@ -1,25 +1,14 @@
 {% extends "base.html" %}
-{% block title %}Recherche{% endblock %}
-{% block body %}
 
-<div class="section">
-<h2>Publications</h2>
-<p>
-<ol reversed="true" class="publi">
-{% for pub in publications %}
-<li>
-
-{% if pub.coauthors %}
-<auteurs>with
-{% for author in pub.coauthors %}
-{{ author }}
-{% endfor %}
-</auteurs>
-{% endif %}
-<titre>"{{ pub.title }}"</titre>
+{% macro publication_coauthors(coauthors) %}
+{% if coauthors %}
+<auteurs>with {% for author in coauthors %}{{ author }} {% endfor %}</auteurs>
 <br/>
+{% endif %}
+{%- endmacro %}
 
-
+{% macro publication_journal(pub, journals) %}
+{% if pub.journal %}
 <journal>
 {% if pub.website %}
 <a href="{{ pub.website }}">
@@ -30,19 +19,43 @@
 , n° {{ pub["issue"] }}
 {% endif %}
 ({{ pub["year"] }})
+{% if pub.pages %}
 p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
+{% endif %}
 {% if pub.website %}
 </a>
 {% endif %}
 </journal>
 <br/>
+{% endif %}
+{%- endmacro %}
 
-{% if pub.arxiv %}
+{% macro publication_arxiv(arxiv) %}
+{% if arxiv %}
 <journal>
-<a href="http://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{ pub.arxiv }}</a>
+<a href="http://arxiv.org/abs/{{ arxiv }}">arXiv:{{ arxiv }}</a>
 </journal>
 <br/>
 {% endif %}
+{%- endmacro %}
+
+
+{% block title %}Recherche{% endblock %}
+{% block body %}
+
+<div class="section">
+<h2>Publications</h2>
+<p>
+<ol reversed="true" class="publi">
+{% for pub in publications %}
+<li>
+
+{{ publication_coauthors(pub.coauthors) }}
+<titre>"{{ pub.title }}"</titre>
+<br/>
+
+{{ publication_journal(pub, journals) }}
+{{ publication_arxiv(pub.arxiv) }}
 
 {% if pub.abstract %}
 <abstract>
@@ -61,15 +74,13 @@ p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 <ul class="publi">
 {% for pub in prepublications %}
 <li>
+
+{{ publication_coauthors(pub.coauthors) }}
+
 <titre>"{{ pub.title }}"</titre>
 <br/>
 
-{% if pub.arxiv %}
-<journal>
-<a href="http://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{pub.arxiv}}</a>
-</journal>
-<br/>
-{% endif %}
+{{ publication_arxiv(pub.arxiv) }}
 </li>
 {% endfor %}
 </ul>
@@ -81,13 +92,8 @@ p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 <ol reversed="true" class="publi">
 {% for pub in conference_papers %}
 <li>
-{% if pub.coauthors %}
-<auteurs>with
-{% for author in pub.coauthors %}
-{{ author }}
-{% endfor %}
-</auteurs>
-{% endif %}
+{{ publication_coauthors(pub.coauthors) }}
+
 <titre>"{{ pub.title }}"</titre>
 <br/>
 
@@ -100,31 +106,9 @@ p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 {% endif %}
 <br/>
 
-{% if pub.journal %}
-<journal>
-{% if pub.website %}
-<a href="{{ pub.website }}">
-{% endif %}
-{{ journals[pub.journal]['short-name'] }}
-{{ pub.volume }}
-{% if pub.issue %}
-, n° {{ pub.issue }}
-{% endif %}
-({{ pub.year }})
-p. {{ pub.pages[0] }}-{{ pub.pages[1] }}
-{% if pub.website %}
-</a>
-{% endif %}
-</journal>
-<br/>
-{% endif %}
+{{ publication_journal(pub, journals) }}
 
-{% if pub.arxiv %}
-<journal>
-<a href="http://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{ pub.arxiv }}</a>
-</journal>
-<br/>
-{% endif %}
+{{ publication_arxiv(pub.arxiv) }}
 
 {% if pub.abstract %}
 <abstract>
