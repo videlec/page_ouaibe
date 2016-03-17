@@ -73,7 +73,8 @@ for content in ["general_presentation",
     filename = os.path.join(DATA_DIR, content + '.md')
     print "Loading {}".format(filename)
     with codecs.open(filename, encoding='utf-8') as f:
-        data[content] = markdown.markdown(f.read())
+        data[content] = markdown.markdown(f.read(),
+                extensions=['markdown.extensions.tables'])
     mtime_data = max(mtime_data, os.path.getmtime(filename))
 
 blog_posts = []
@@ -137,7 +138,10 @@ for blog in blog_posts:
     name = blog['name']
     output_filename = os.path.join('output', name + '.html')
 
-    mtime_output = os.path.getmtime(output_filename)
+    try:
+        mtime_output = os.path.getmtime(output_filename)
+    except OSError:
+        mtime_output = 0.0
 
     if mtime_output < blog['mtime']:
         print "Process blog '{}' last modified on {}".format(name, blog['lastmodif'])
