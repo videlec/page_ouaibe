@@ -26,6 +26,6 @@ def process_article(text):
     return markdown.markdown(
         text,
         encoding="utf-8",
-        extensions=[code_hilite, math],
+        extensions=[code_hilite, math, 'markdown.extensions.tables'],
         )
 
