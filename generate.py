@@ -44,8 +44,8 @@ def article_list():
 # copy files from the static dir that are not already in the output one
 for name in os.listdir(STATIC_DIR):
     static_filename = os.path.join(STATIC_DIR, name)
-    output_filename = os.path.join(OUTPUT_DIR, name)
 
+    output_filename = os.path.join(OUTPUT_DIR, name)
     static_mtime = os.path.getmtime(static_filename)
     try:
         output_mtime = os.path.getmtime(output_filename)
@@ -55,7 +55,6 @@ for name in os.listdir(STATIC_DIR):
     if static_mtime > output_mtime:
         print "Copy static file {}".format(name)
         shutil.copy(static_filename, output_filename)
-
 
 mtime_data = 0.0
 data = {}
