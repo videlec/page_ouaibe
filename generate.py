@@ -27,13 +27,13 @@ ARTICLES_DIR = 'webpage/articles/'
 STATIC_DIR = 'webpage/static/'
 OUTPUT_DIR = 'output/'
 
-#TODO: implement timestamps for everything using a dependency mechanism
+#TODO: implement timestamps for everything using a dependency mechanism !!
 
 def article_list():
     articles = []
     for article in os.listdir(ARTICLES_DIR):
         if not article.endswith('.md'):
-            print "WARNING: {} does not end in .md (ignored)".format(article)
+            print("WARNING: {} does not end in .md (ignored)".format(article))
             continue
         filename = os.path.join(ARTICLES_DIR, article)
         mtime = os.path.getmtime(filename)
@@ -53,7 +53,7 @@ for name in os.listdir(STATIC_DIR):
         output_mtime = 0.0
 
     if static_mtime > output_mtime:
-        print "Copy static file {}".format(name)
+        print("Copy static file {}".format(name))
         shutil.copy(static_filename, output_filename)
 
 mtime_data = 0.0
@@ -62,7 +62,7 @@ for kind in ["journals",
              "publications",
              "prepublications",
              "conference_papers"]:
-    print "Loading json data: {}".format(kind)
+    print("Loading json data: {}".format(kind))
     filename = os.path.join(DATA_DIR, kind + '.json')
     data[kind] = json.load(open(filename))
     mtime_data = min(mtime_data, os.path.getmtime(filename))
@@ -70,7 +70,7 @@ for kind in ["journals",
 for content in ["general_presentation",
                 "research_description"]:
     filename = os.path.join(DATA_DIR, content + '.md')
-    print "Loading {}".format(filename)
+    print("Loading {}".format(filename))
     with codecs.open(filename, encoding='utf-8') as f:
         data[content] = markdown.markdown(f.read(),
                 extensions=['markdown.extensions.tables'])
@@ -80,7 +80,7 @@ blog_posts = []
 mtime_posts = 0.0
 for mtime, article in article_list():
     name = os.path.splitext(article)[-2]
-    print "Loading blog post {}".format(name)
+    print("Loading blog post {}".format(name))
     filename = os.path.join(ARTICLES_DIR, article)
     with codecs.open(filename, encoding='utf-8') as f:
         title = None
@@ -118,7 +118,7 @@ for page in pages:
 
 for page in pages:
     if page['mtime_output'] < max(page['mtime_template'], mtime_data):
-        print u"Generate {}".format(page['name'])
+        print(u"Generate {}".format(page['name']))
 
         template = env.get_template(page['template'])
         filename = os.path.join('output', page['template'])
@@ -127,7 +127,7 @@ for page in pages:
             output.write(template.render(pages=pages, **data))
         page['status'] = 'unselected'
     else:
-        print u"Skip {} because already up to date".format(page['name'])
+        print(u"Skip {} because already up to date".format(page['name']))
 
 page['status'] = 'selected'  # reselect the blog !!
 template = env.get_template('base_blog.html')
@@ -143,7 +143,7 @@ for blog in blog_posts:
         mtime_output = 0.0
 
     if mtime_output < blog['mtime']:
-        print "Process blog '{}' last modified on {}".format(name, blog['lastmodif'])
+        print("Process blog '{}' last modified on {}".format(name, blog['lastmodif']))
 
         with codecs.open(input_filename, encoding="utf-8") as f:
             content = process_article(f.read())
@@ -151,4 +151,4 @@ for blog in blog_posts:
         with codecs.open(output_filename, "w", encoding="utf-8") as f:
             f.write(template.render(blog_content=content, pages=pages))
     else:
-        print "Skip blog '{}' because already up to date".format(name)
+        print("Skip blog '{}' because already up to date".format(name))
