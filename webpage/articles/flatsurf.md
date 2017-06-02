@@ -2,17 +2,21 @@
 [comment]: # (Cet article est publié sous la licence Creative Commons Attribution-NonCommercial 4.0 International License.)
 [comment]: # (This article is published under the Creative Commons Attribution-NonCommercial 4.0 International License)
 
-flatsurf package overview
-=========================
+flatsurf (or surface_dynamics) package overview
+===============================================
 
-flatsurf is a [Sagemath](http://sagemath.org) package that I wrote (with some help
-from Samuel Lelièvre) to deal with translation surfaces. In order to install it, simply do
+surface_dynamics is a [Sagemath](http://sagemath.org) package that I wrote (with the help
+of contributors) to deal with translation surfaces. It installs as a standard Python
+module inside Sage. You can install it using the following one-line command
 
-    $ sage -p http://www.labri.fr/perso/vdelecro/flatsurf-0.2.spkg
+    $ sage -pip install surface_dynamics --user
 
-You will find more detailed installation instructions in the file [README.txt](README.txt).
+You will find more information at:
 
-In this article I briefly describe the usage of the package.
+- [PyPI page](https://pypi.python.org/pypi/surface_dynamics/)
+- [complete documentation](https://pythonhosted.org/surface_dynamics/).
+
+Below, I briefly describe the usage of this package.
 
 General usage
 -------------
@@ -98,6 +102,34 @@ by Avila-Viana)
     :::pycon
     >>> g.matrix().eigenvalues()
     [1, 1, 0.1458980337503155?, 6.854101966249684?]
+
+Lyapunov exponents
+------------------
+
+You can compute Lyapunov exponents of the \( H^+ \) and \( H^- \) Kontsevich-Zorich
+cocycle
+
+	:::pycon
+	>>> Q12_reg = QuadraticStratum(12).regular_component()
+	>>> Q12_reg.lyapunov_exponents_H_plus()
+	[0.6671, 0.4506, 0.2372, 0.08841]
+    >>> Q12_reg.lyapunov_exponents_H_minus()
+    [1.001, 0.6669, 0.45018, 0.3139, 0.23218, 0.12143, 0.08594]
+
+More generally, one can compute the Lyapunov exponents of the restriction of the
+\( H^+ \) Kontsevich-Zorich cocycle in a covering locus to any isotypic invariant
+subbundle::
+
+	:::pycon
+	>>> p = iet.GeneralizedPermutation('a a', 'b b c c d d e e')
+    >>> c = p.cover(['(1,2,3,4)', '(1,4,3,2)', '(1,2,3,4)', '()', '()'])
+    >>> c.stratum()
+    Q_3(10, 2^3, -1^8)
+    >>> for (lexp,char) in c.lyapunov_exponents_H_plus(isotypic_decomposition=True, return_char=True):
+    ...     print "{:15}: {}".format(char, lexp)
+    (1, 1, 1, 1)   : []
+    (1, -1, 1, -1) : [0.3360]
+    (2, 0, -2, 0)  : [0.1665, 0.1661]
 
 Origamis
 --------
@@ -276,27 +308,4 @@ More
 ----
 
 If you have any doubt, question or request, send me an e-mail and I will update
-this document.
-
-Note that the package is by no mean complete. There are plenty of things under
-development and/or integration. And your help is welcome:
-
- * interactive plotting (see the code in [this github repository](https://github.com/videlec/sage-flatsurf) written by Pat Hooper and me)
-
- * enumeration of pseudo-Anosov
-
- * enumeration of saddle connections and cylinder decompositions (Alex Eskin program)
-
- * code for testing minimality of an algebraic interval exchange (Michael Boshernitzan algorithm)
-
- * \( \operatorname{SL}(2, \mathbb{R}) \)-orbit closure of translation surfaces
-
- * monodromy representation of origamis (i.e. the morphism \( \operatorname{SL}(2, \mathbb{Z}) \to \operatorname{Sp}(2g, \mathbb{Z}) \))
-
- * more Lyapunov exponents (Charles Fougeron program)
-
- * ...
-
-The code is publicly available, you can clone the code source using git
-
-    git clone https://daemon@git.math.cnrs.fr/anon/plm/delecroix/flatsurf
+the package or/and this document. Any contribution is welcome!

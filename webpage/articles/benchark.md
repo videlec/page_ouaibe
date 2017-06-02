@@ -7,8 +7,8 @@ Comment mesurer les performances d'un algorithme
 
 Cet article (en construction) est en fait un petit pense bête. J'ai eu
 recemment à faire des comparisons de vitesses d'exécution d'algorithmes
-([l'évaluation des polynomes dans Sage][1] et les sommes de puissances
-de racines dans Flint, voir [pull/231][1] et [pull/251][3]).
+([l'évaluation des polynomes dans Sage][sage_poly] et les sommes de puissances
+de racines dans Flint, voir [pull/213][flint_pull_213] et [pull/251][flint_pull_251]).
 Il contient ce que j'ai pu glaner sur comment faire ça en Python et en C.
 
 Version en C
@@ -115,10 +115,8 @@ A suivre...
 
 ![graphique power sums deg 33 mod 293](graphic_deg33_mod293.png)
 
-Quelques références
--------------------
-[1]: http://trac.sagemath.org/ticket/19822
-[2]: https://github.com/wbhart/flint2/pull/213
-[3]: https://github.com/wbhart/flint2/pull/251
-[4]: http://pubs.opengroup.org/onlinepubs/007908775/xsh/time.h.html
-[5]: http://pubs.opengroup.org/onlinepubs/007908775/xsh/systypes.h.html
+[sage_poly]: http://trac.sagemath.org/ticket/19822
+[flint_pull_213]: https://github.com/wbhart/flint2/pull/213
+[flint_pull_251]: https://github.com/wbhart/flint2/pull/251
+[time_h]: http://pubs.opengroup.org/onlinepubs/007908775/xsh/time.h.html
+[systypes_h]: http://pubs.opengroup.org/onlinepubs/007908775/xsh/systypes.h.html
