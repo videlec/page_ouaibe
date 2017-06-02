@@ -1,18 +1,10 @@
 [
-  {
-   "coauthors": ["C. Mathéus"],
-   "title": "Un contre-exemple à la réciproque du crit&egrave;re de Forni pour la positivité des exposants  de  Lyapunov  du  cocycle  de  Kontsevich-Zorich",
-   "arxiv": "1103.1560",
-   "abstract": "Forni proved that a certain geometric quantity gives a lower bound for the number of positive Lyapunov exponents of the Kontsevich-Zorich cocycle (<a href=\"http://aimsciences.org/journals/displayArticlesnew.jsp?paperID=6356\">J. Mod. Dyn. 5, No. 2 (2011)</a>, see also <a href=\"http://arxiv.org/abs/1009.4655\">arXiv:1009.4655</a>). In this short note, we exhibit an example for which the geometric criterion is not satisfied but for which all Lyapunov exponents are positive. In order to prove positivity, we use a result of C. Matheus, M. Moeller and J.-C. Yoccoz (<a href=\"http://arxiv.org/abs/1305.2033\">arXiv:1305.2033</a>)"
-  },
-
-  {
-   "coauthors": ["A. Avila"],
-   "title": "Weak-mixing directions in non-arithmetic Veech surfaces",
-   "arxiv": "1304.3318",
-   "abstract": "In this paper we prove the genericity of weak mixing in non-arithmetic Veech surfaces (arithmetic is synonym for square tiled). We know since the work A. Avila and G. Forni (<a href=\"http://annals.math.princeton.edu/2007/165-2/p07\">Ann. of Math. 165 (2007)</a>, see also <a href=\"http://arxiv.org/abs/math/0406326\">arXiv:math/0406326</a>) that weak-mixing is prevalent in the space of translation surfaces. Nevertheless, there was no known example of surfaces for which the weak-mixing is prevalent in almost every direction. Our result applies in particular to billiard in regular polygons studied by Veech (<a href=\"http://link.springer.com/article/10.1007%2FBF01388890\">Inv. Math. 97 (1989)</a>) and billiard in L-shaped tables introduced by C. McMullen (<a href=\"http://www.ams.org/journals/jams/2003-16-04/S0894-0347-03-00432-6/\">J. Amer. Math. Soc. 16 (2003)</a>)."
-  },
-
+{
+  "coauthors": ["E. Goujard", "P. Zograf", "A. Zorich"],
+  "title": "Square-tiled surfaces of fixed combinatorial type: equidistribution, counting, volumes of the ambient strata",
+  "arxiv": "1612.08374",
+  "abstract": "We study equidistribution of square-tiled surfaces with constrained combinatorics in strata of translation surfaces."
+},
  {
   "coauthors": ["J.-F. Bertazzon"],
   "title": "Étude d'une équation intégrale avec des méthodes combinatoires",

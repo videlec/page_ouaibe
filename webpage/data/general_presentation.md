@@ -1,10 +1,15 @@
-Je travaille en théorie des systèmes dynamiques et plus particulièrement
-sur deux types de modèles qui sont en interaction : certains systèmes
-d'entropie nulle (rotations, billards rationnels, points fixes de
-substitutions primitives, ...) et les dynamiques
-d'induction/renormalisation associées (fractions continues, flot de
-Teichmüller, décalages de type fini, ...) dont la dynamique est
+Je travaille sur différents problèmes reliés à la combinatoire, la
+théorie des nombres, la géométrie et les systèmes dynamiques.
+
+Depuis ma thèse, je travaille sur deux types de systèmes dynamiques
+en interaction : certains systèmes d'entropie nulle (rotations,
+billards rationnels, points fixes de substitutions primitives, ...)
+et les dynamiques d'induction/renormalisation associées (fractions continues,
+flot de Teichmüller, décalages de type fini, ...) dont la dynamique est
 hyperbolique ou non-uniformément hyperbolique.
+
+Plus récemment, je m'intéresse à certains problèmes d'énumération
+et de limites d'échelles.
 
 
 Je suis actuellement chargé de recherche au

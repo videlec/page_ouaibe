@@ -1,5 +1,40 @@
 [ 
   {
+   "coauthors": ["M. Boshernitzan"],
+   "title": " From a packing problem to quantiative recurrence in [0,1] and Lagrange spectrum of interval exchanges",
+   "journal": "DiscreteAnalysis",
+   "volume": "1749",
+   "year": "2017",
+   "website": "http://discreteanalysisjournal.com/article/1749-from-a-packing-problem-to-quantitative-recurrence-in-0-1-and-the-lagrange-spectrum-of-interval-exchanges",
+   "arxiv": "1608.04591",
+   "abstract": "This article provides optimal constants for two quantitative recurrence problems. First of all for recurrence of maps of the interval [0,1] that preserve the Lebesgue measure. On the other hand, we study the bottom of the Lagrange spectrum of interval exchange transformations. Both results are based on a unconventional packing problem in the plane with respect to the \"pseudo-norm\" N(x,y) = sqrt(|xy|)."
+  },
+
+  {
+   "title": "Weak-mixing directions in non-arithmetic Veech surfaces",
+   "coauthors": ["A. Avila"],
+   "journal": "JAMS",
+   "volume": "29",
+   "year": "2016",
+   "pages": [1167,1208],
+   "arxiv": "1304.3318",
+   "website": "http://www.ams.org/journals/jams/2016-29-04/S0894-0347-2016-00856-1/home.html",
+   "abstract": "In this paper we prove the genericity of weak mixing in non-arithmetic Veech surfaces (arithmetic is synonym for square tiled). We know since the work A. Avila and G. Forni (<a href=\"http://annals.math.princeton.edu/2007/165-2/p07\">Ann. of Math. 165 (2007)</a>, see also <a href=\"http://arxiv.org/abs/math/0406326\">arXiv:math/0406326</a>) that weak-mixing is prevalent in the space of translation surfaces. Nevertheless, there was no known example of surfaces for which the weak-mixing is prevalent in almost every direction. Our result applies in particular to billiard in regular polygons studied by Veech (<a href=\"http://link.springer.com/article/10.1007%2FBF01388890\">Inv. Math. 97 (1989)</a>) and billiard in L-shaped tables introduced by C. McMullen (<a href=\"http://www.ams.org/journals/jams/2003-16-04/S0894-0347-03-00432-6/\">J. Amer. Math. Soc. 16 (2003)</a>)."
+  },
+
+  {
+   "title": "Un contre-exemple à la réciproque du crit&egrave;re de Forni pour la positivité des exposants  de  Lyapunov  du  cocycle  de  Kontsevich-Zorich",
+   "coauthors": ["C. Mathéus"],
+   "journal": "MathResLett",
+   "volume": 22,
+   "issue": 6,
+   "year": 2015,
+   "pages": [1667,1678],
+   "arxiv": "1103.1560",
+   "abstract": "Forni proved that a certain geometric quantity gives a lower bound for the number of positive Lyapunov exponents of the Kontsevich-Zorich cocycle (<a href=\"http://aimsciences.org/journals/displayArticlesnew.jsp?paperID=6356\">J. Mod. Dyn. 5, No. 2 (2011)</a>, see also <a href=\"http://arxiv.org/abs/1009.4655\">arXiv:1009.4655</a>). In this short note, we exhibit an example for which the geometric criterion is not satisfied but for which all Lyapunov exponents are positive. In order to prove positivity, we use a result of C. Matheus, M. Moeller and J.-C. Yoccoz (<a href=\"http://arxiv.org/abs/1305.2033\">arXiv:1305.2033</a>)"
+  },
+
+  {
    "title": "Diagonal changes in hyperelliptic components. A natural extension to Ferenczi-Zamboni induction",
    "coauthors": ["C. Ulcigrai"],
    "journal": "GeomDed",
@@ -33,7 +68,7 @@
    "volume": 47,
    "issue": 6,
    "pages": [1085, 1110],
-   "arxiv": "1107.1110",
+   "arxiv": "1107.1810",
    "website": "http://smf4.emath.fr/Publications/AnnalesENS/4_47/html/ens_ann-sc_47_1085-1110.php",
    "year": 2014,
    "abstract": "The wind-tree model is a billiard in the plane where scatterers are rectangles randomly displaced. We study a periodic version and prove that the diffusion rate is 2/3. More precisely the maximum distance reached by a particule before time T is around T^(2/3). It makes a large difference with random walks in the plane for which that quantity equals T^(1/2)."

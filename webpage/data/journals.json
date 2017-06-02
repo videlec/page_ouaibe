@@ -1,33 +1,50 @@
 {
   "AIF": {
-		  "short-name": "Ann. Inst. Fourier",
-          "full-name": "Annales de l'Institut Fourier",
-		  "website": "http://aif.cedram.org/"
-		  },
+      "short-name": "Ann. Inst. Fourier",
+      "full-name": "Annales de l'Institut Fourier",
+      "website": "http://aif.cedram.org/"
+      },
 
   "AENS": {
-		  "short-name": "Ann. Sc. ENS",
-		  "full-name": "Annales scientifiques de l'École normale supérieure",
-		  "website": "http://www.math.ens.fr/edition/annales/"
-          },
+      "short-name": "Ann. Sc. ENS",
+      "full-name": "Annales scientifiques de l'École normale supérieure",
+      "website": "http://www.math.ens.fr/edition/annales/"
+      },
+
+  "DiscreteAnalysis": {
+      "short-name": "Discrete Analysis",
+      "full-name": "Discrete Analysis",
+      "website": "http://discreteanalysisjournal.com/"
+      },
 
   "GeomDed": {
-          "short-name": "Geom. Ded.",
-		  "full-name": "Geometriae Dedicata",
-		  "website": "http://www.springer.com/mathematics/geometry/journal/10711"
-		   },
+      "short-name": "Geom. Ded.",
+      "full-name": "Geometriae Dedicata",
+      "website": "http://www.springer.com/mathematics/geometry/journal/10711"
+       },
+
+  "JAMS": {
+      "short-name": "J. of AMS",
+      "full-name": "Journal of the American Mathematical Society",
+      "website": "http://www.ams.org/publications/journals/journalsframework/jams"
+      },
 
   "JModDyn": {
-		  "short-name": "J. of Mod. Dyn.",
-		  "full-name": "Journal of Modern Dynamics",
-		  "website": "http://jmdmath.s3-website-us-east-1.amazonaws.com/"
-          },
+      "short-name": "J. of Mod. Dyn.",
+      "full-name": "Journal of Modern Dynamics",
+      "website": "http://jmdmath.s3-website-us-east-1.amazonaws.com/"
+      },
 
   "KokBes": {
-		  "short-name": "RIMS Kôkyûroku Bessatsu",
-		  "full-name": "RIMS Kôkyûroku Bessatsu",
-		  "website": "http://www.kurims.kyoto-u.ac.jp/~kenkyubu/bessatsu.html"
-  }
+      "short-name": "RIMS Kôkyûroku Bessatsu",
+      "full-name": "RIMS Kôkyûroku Bessatsu",
+      "website": "http://www.kurims.kyoto-u.ac.jp/~kenkyubu/bessatsu.html"
+  },
 
+  "MathResLett": {
+      "short-name": "Math Res. Lett.",
+      "full-name": "Mathematical Research Letters",
+      "website": "http://intlpress.com/site/pub/pages/journals/items/mrl/_home/_main/"
+  }
 }
 
