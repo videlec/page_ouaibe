@@ -1,13 +1,26 @@
 [ 
   {
    "coauthors": ["M. Boshernitzan"],
-   "title": " From a packing problem to quantiative recurrence in [0,1] and Lagrange spectrum of interval exchanges",
+   "title": " From a packing problem to quantiative recurrence in [0,1] and the Lagrange spectrum of interval exchanges",
    "journal": "DiscreteAnalysis",
    "volume": "1749",
    "year": "2017",
    "website": "http://discreteanalysisjournal.com/article/1749-from-a-packing-problem-to-quantitative-recurrence-in-0-1-and-the-lagrange-spectrum-of-interval-exchanges",
    "arxiv": "1608.04591",
    "abstract": "This article provides optimal constants for two quantitative recurrence problems. First of all for recurrence of maps of the interval [0,1] that preserve the Lebesgue measure. On the other hand, we study the bottom of the Lagrange spectrum of interval exchange transformations. Both results are based on a unconventional packing problem in the plane with respect to the \"pseudo-norm\" N(x,y) = sqrt(|xy|)."
+  },
+
+  {
+   "coauthors": ["V. Berthé", "F. Dolce", "D. Perrin", "C. Reutenauer", "G. Rindone"],
+   "title": "Return words of linear involutions and fundamental groups",
+   "journal": "ETDS",
+   "volume": 37,
+   "issue": 3,
+   "year": 2017,
+   "pages": [693, 715],
+   "arxiv": "1405.3529",
+   "website": "https://www.cambridge.org/core/journals/ergodic-theory-and-dynamical-systems/article/return-words-of-linear-involutions-and-fundamental-groups/47E1348C3E4A48FE946773B3ECD7A691",
+   "abstract": "We investigate the shifts associated with natural codings of linear involutions. We deduce, from the geometric representation of linear involutions as Poincaré maps of measured foliations, a suitable definition of return words which yields that the set of return words to a given word is a symmetric basis of the free group on the underlying alphabet A. The set of return words with respect to a subgroup of finite index G of the free group on A is also proved to be a symmetric basis of G"
   },
 
   {

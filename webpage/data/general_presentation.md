@@ -12,7 +12,7 @@ Plus récemment, je m'intéresse à certains problèmes d'énumération
 et de limites d'échelles.
 
 
-Je suis actuellement chargé de recherche au
-[LaBRI](http://www.labri.fr/) à Bordeaux. Cependant, je passe l'année
+Je suis depuis 2013 chargé de recherche CNRS au
+[LaBRI](http://www.labri.fr/) à Bordeaux. J'ai passé l'année
 2015-2016 au [CMM à Santiago du
 Chili](https://www.cmm.uchile.cl/?cmm_people=vincent-delecroix).

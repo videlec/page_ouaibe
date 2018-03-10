@@ -17,6 +17,12 @@
       "website": "http://discreteanalysisjournal.com/"
       },
 
+  "ETDS": {
+      "short-name": "Erg. Th. and Dyn. Sys.",
+      "full-name": "Ergodic Theory and Dynamical Systems",
+      "website": "https://www.cambridge.org/core/journals/ergodic-theory-and-dynamical-systems"
+      },
+
   "GeomDed": {
       "short-name": "Geom. Ded.",
       "full-name": "Geometriae Dedicata",
