@@ -6,6 +6,62 @@
 <h2><a name="enseignement">Enseignement</a></h2>
 <p>
 <ul>
+
+
+  <li>
+  <a href="http://www.chine.campusfrance.org/fr/probability-theory-and-dynamical-systems">2017 Ecole d'été Luminy (Marseille)</a>: Experimental mathematics with Sage
+  (together with
+    <a href="https://members.loria.fr/DJamet/">Damien Jamet,</a>,
+    <a href="http://www.slabbe.org/">Sébastien Labbé</a>,
+    Milton Minervo,
+    <a href="http://monteil.perso.math.cnrs.fr/">Thierry Monteil</a>)
+  <ul>
+    <li> programming exercises
+    <ul>
+     {% for sheet,description in [("chap12-list", "Lists (chap 12)"),
+                           ("chap13-for", "For loops (chap 13)"),
+                           ("chap14-if", "If statements (chap 14)"),
+                           ("chap15-def", "Functions (chap 15)"),
+                           ("chap16-while", "While loops (chap 16)"),
+                           ("chap17-prog", "Revision exercises (chap 17)")] %}
+     <li> {{ description }}:
+        <a href="summer_school_luminy_2017/{{ sheet }}.en.ipynb">ipynb</a>
+        <a href="summer_school_luminy_2017/{{ sheet }}.en.rst">rst</a>
+     </li>
+     {% endfor %}
+    </ul>
+   </li>
+    {% for sheet in ["exact_versus_floating_point",
+                     "logistic_map",
+                     "markov",
+                     "matrix_dynamics",
+		     "measure_simulation",
+		     "random_walk"] %}
+    <li>
+    {{ sheet }}:
+    <a href="summer_school_luminy_2017/{{ sheet }}.ipynb">ipynb</a>
+    <a href="summer_school_luminy_2017/{{ sheet }}.rst">rst</a>
+    <a href="summer_school_luminy_2017/{{ sheet }}.pdf">pdf</a>
+    </li>
+    {% endfor %}
+  </ul>
+  </li>
+
+  <li>
+  2017 Sage master class in Moscow, Russia
+  <ul>
+  <li><a href="Russie2017-presentation_Sage.pdf">Sage pdf presentation</a></li>
+  <li><a href="Russie2017-iet_in_Sage.ipynb">Sage Jupyter notebook about i.e.t.</a></li>
+  <li><a href="Russie2017-iet_in_Sage.pdf">Sage notebook in pdf format</a></li>
+  </ul>
+  </li>
+
+  <li>
+  2016 Octobre
+  <a href="https://github.com/videlec/aims-python-rwanda-2016">Scientific Software Development in Python</a>
+  (Kigali, Rwanda)
+  </li>
+
   <li>
   2015 <a href="http://cantorsalta2015.sciencesconf.org/">ecole CIMPA a Salta</a> (Argentine)
   <ul>
@@ -74,4 +130,3 @@
 
 
 {% endblock %}
-
