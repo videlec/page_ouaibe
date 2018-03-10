@@ -16,6 +16,7 @@ import markdown
 import json
 import os
 import shutil
+import re
 
 from webpage.process_article import process_article
 from jinja2 import Environment, PackageLoader
@@ -29,15 +30,26 @@ OUTPUT_DIR = 'output/'
 
 #TODO: implement timestamps for everything using a dependency mechanism !!
 
+re_sage_code = re.compile('    :::pycon')
+
 def article_list():
     articles = []
     for article in os.listdir(ARTICLES_DIR):
         if not article.endswith('.md'):
             print("WARNING: {} does not end in .md (ignored)".format(article))
             continue
+
+        # check whether it contains Sage code
+        with open(os.path.join(ARTICLES_DIR, article)) as f:
+            try:
+                next(re_sage_code.finditer(f.read()))
+                has_sage_code = True
+            except StopIteration:
+                has_sage_code = False
+
         filename = os.path.join(ARTICLES_DIR, article)
         mtime = os.path.getmtime(filename)
-        articles.append((mtime, article))
+        articles.append((mtime, article, has_sage_code))
     articles.sort()
     return articles
 
@@ -78,7 +90,7 @@ for content in ["general_presentation",
 
 blog_posts = []
 mtime_posts = 0.0
-for mtime, article in article_list():
+for mtime, article, has_sage_code in article_list():
     name = os.path.splitext(article)[-2]
     print("Loading blog post {}".format(name))
     filename = os.path.join(ARTICLES_DIR, article)
@@ -93,7 +105,10 @@ for mtime, article in article_list():
                        'url': name+'.html',
                        'mtime': mtime,
                        'lastmodif': mtime_date.strftime("%y/%m/%d"),
-                       'title': title})
+                       'title': title,
+                       'sage': has_sage_code,
+                       'url_sage': name + '_sage.html'
+                       })
 
 data['blog_posts'] = blog_posts
 
@@ -106,6 +121,7 @@ pages = [
    {'link': 'blog.html', 'name': u'Misc', 'template': 'blog.html'}
    ]
 
+# computing time stamps
 for page in pages:
     page['status'] = 'unselected'
     filename = os.path.join(OUTPUT_DIR, page['link'])
@@ -131,6 +147,7 @@ for page in pages:
 
 page['status'] = 'selected'  # reselect the blog !!
 template = env.get_template('base_blog.html')
+template_sage = env.get_template('base_blog_sagecell.html')
 
 for blog in blog_posts:
     input_filename = blog['path']
@@ -142,7 +159,7 @@ for blog in blog_posts:
     except OSError:
         mtime_output = 0.0
 
-    if mtime_output < blog['mtime']:
+    if True: # mtime_output < blog['mtime']:
         print("Process blog '{}' last modified on {}".format(name, blog['lastmodif']))
 
         with codecs.open(input_filename, encoding="utf-8") as f:
@@ -150,5 +167,13 @@ for blog in blog_posts:
 
         with codecs.open(output_filename, "w", encoding="utf-8") as f:
             f.write(template.render(blog_content=content, pages=pages))
+
+        if blog['sage']:
+            output_filename_sage = os.path.join('output', name + '_sage.html')
+            with codecs.open(input_filename, encoding="utf-8") as f:
+                content = process_article(f.read(), sage=True)
+            with codecs.open(output_filename_sage, "w", encoding="utf-8") as f:
+                f.write(template_sage.render(blog_content=content, pages=pages))
+
     else:
         print("Skip blog '{}' because already up to date".format(name))
