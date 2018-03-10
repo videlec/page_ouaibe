@@ -5,16 +5,17 @@
 flatsurf (or surface_dynamics) package overview
 ===============================================
 
-surface_dynamics is a [Sagemath](http://sagemath.org) package that I wrote (with the help
-of contributors) to deal with translation surfaces. It installs as a standard Python
-module inside Sage. You can install it using the following one-line command
+surface_dynamics is a [SageMath](http://sagemath.org) package for translation surfaces
+in Sage that I maintain (see the list of contributors below). You can install it using
+the following one-line command
 
     $ sage -pip install surface_dynamics --user
 
-You will find more information at:
+This page describe quickly some usage of the library. Other sources of information includes
 
 - [PyPI page](https://pypi.python.org/pypi/surface_dynamics/)
-- [complete documentation](https://pythonhosted.org/surface_dynamics/).
+- [reference manual](http://www.labri.fr/perso/vdelecro/surface-dynamics/)
+- [development page](https://github.com/videlec/flatsurf-package)
 
 Below, I briefly describe the usage of this package.
 
@@ -25,7 +26,7 @@ Once it is installed on your computer and Sage is launched, you need to enter
 the following command
 
     :::pycon
-    >>> from surface_dynamics.all import *
+    >>> from surface_dynamics import *
 
 It makes accessible a lot of new objects (like `iet`, `AbelianStratum`, `QuadraticStratum`,
 `CylinderDiagram`, `Origami` and `OrigamiDatabase`). Recall that to access the documentation
@@ -109,10 +110,10 @@ Lyapunov exponents
 You can compute Lyapunov exponents of the \( H^+ \) and \( H^- \) Kontsevich-Zorich
 cocycle
 
-	:::pycon
-	>>> Q12_reg = QuadraticStratum(12).regular_component()
-	>>> Q12_reg.lyapunov_exponents_H_plus()
-	[0.6671, 0.4506, 0.2372, 0.08841]
+    :::pycon
+    >>> Q12_reg = QuadraticStratum(12).regular_component()
+    >>> Q12_reg.lyapunov_exponents_H_plus()
+    [0.6671, 0.4506, 0.2372, 0.08841]
     >>> Q12_reg.lyapunov_exponents_H_minus()
     [1.001, 0.6669, 0.45018, 0.3139, 0.23218, 0.12143, 0.08594]
 
@@ -120,8 +121,8 @@ More generally, one can compute the Lyapunov exponents of the restriction of the
 \( H^+ \) Kontsevich-Zorich cocycle in a covering locus to any isotypic invariant
 subbundle::
 
-	:::pycon
-	>>> p = iet.GeneralizedPermutation('a a', 'b b c c d d e e')
+    :::pycon
+    >>> p = iet.GeneralizedPermutation('a a', 'b b c c d d e e')
     >>> c = p.cover(['(1,2,3,4)', '(1,4,3,2)', '(1,2,3,4)', '()', '()'])
     >>> c.stratum()
     Q_3(10, 2^3, -1^8)
@@ -168,7 +169,7 @@ And it is also possible to build them from strata
     :::pycon
     >>> A = AbelianStratum(2,2)
     >>> cc = A.odd_component()
-    >>> cc.one_origami(12)
+    >>> cc.one_origami()
     (1,2,3,4,5,6)
     (1,6)(2)(3,4)(5)
 
@@ -211,7 +212,8 @@ distribution of the number of cylinders in all Teichmüller curves of
 the component \( H^{odd}(4) \) (genus 3) with 11 squares
 
     :::pycon
-	>>> for T in cc.arithmetic_teichmueller_curves(11):
+    >>> cc = AbelianStratum(4).odd_component()
+    >>> for T in cc.arithmetic_teichmueller_curves(11):
     ...     cyls = [0]*3
     ...     for o in T:
     ...         n = len(o.cylinder_decomposition())
@@ -230,9 +232,9 @@ Teichmüller curves (up to some number of squares). It is a standard sqlite
 database and can also be read from other programs.
 
     :::pycon
-    >>> from surface_dynamics.all import *
+    >>> from surface_dynamics import *
     >>> D = OrigamiDatabase()
-    >>> q = D.query(stratum=AbelianStratum(2), nb_square=9)
+    >>> q = D.query(stratum=AbelianStratum(2), nb_squares=9)
     >>> q.number_of()
     2
     >>> o1,o2 = q.list()
