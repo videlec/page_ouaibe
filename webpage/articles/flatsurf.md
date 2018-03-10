@@ -6,12 +6,16 @@ flatsurf (or surface_dynamics) package overview
 ===============================================
 
 surface_dynamics is a [SageMath](http://sagemath.org) package for translation surfaces
-in Sage that I maintain (see the list of contributors below). You can install it using
-the following one-line command
+in Sage that is maintained by Vincent Delecroix (see the complete list of contributors
+on the [PyPI page](https://pypi.python.org/pypi/)). You can install it using the
+following one-line command
 
     $ sage -pip install surface_dynamics --user
 
-This page describe quickly some usage of the library. Other sources of information includes
+Or alternatively, you can use it inside [Sage Cell](https://sagecell.sagemath.org/) (thanks
+to Andrey Novoseltsev).
+
+This page describes quickly some usage of the library. Other sources of information includes
 
 - [PyPI page](https://pypi.python.org/pypi/surface_dynamics/)
 - [reference manual](http://www.labri.fr/perso/vdelecro/surface-dynamics/)
@@ -23,14 +27,14 @@ General usage
 -------------
 
 Once it is installed on your computer and Sage is launched, you need to enter
-the following command
+the following command to be able to use the library
 
     :::pycon
     >>> from surface_dynamics import *
 
-It makes accessible a lot of new objects (like `iet`, `AbelianStratum`, `QuadraticStratum`,
-`CylinderDiagram`, `Origami` and `OrigamiDatabase`). Recall that to access the documentation
-within Sage you need to put a question mark after the command and press enter
+The above command makes accessible a lot of new objects like `iet`, `AbelianStratum`,
+`QuadraticStratum`, `CylinderDiagram`, `Origami` and `OrigamiDatabase`. Recall that to access
+the documentation within Sage you need to put a question mark after the command and press enter
 
     :::pycon
     >>> Origami?
@@ -50,7 +54,8 @@ Most of the functions in the package are well documented together with examples.
 Strata and Interval exchange transformations
 --------------------------------------------
 
-The package contains a lot of code to deal with interval exchange transformations.
+The package contains a lot of code to deal with interval exchange transformations and
+linear involutions. Here is how a permutation can be created
 
     :::pycon
     >>> p = iet.Permutation('a b c d', 'd c b a')
@@ -60,11 +65,16 @@ The package contains a lot of code to deal with interval exchange transformation
     >>> p.stratum()
     H(2)
 
+and a generalized permutation
+
+    :::pycon
     >>> q = iet.GeneralizedPermutation('a a', 'b b c c d d e e')
     >>> q.stratum()
     Q_0(1, -1^5)
 
-You can also get one permutation from a given stratum component
+You can also get one permutation from a given stratum component (following
+the method of A. Zorich "Explicit Jenkins-Strebel representatives of all
+strata of Abelian and quadratic differentials", 2008)
 
     :::pycon
     >>> A = AbelianStratum(4,4)
@@ -83,22 +93,52 @@ You can also get one permutation from a given stratum component
     0 1 2 3 4 5 6 5
     7 6 4 7 3 2 1 0
 
-It is possible to build the coding of a self-similar interval exchange transformation
-using periodic paths in the Rauzy diagram.
+Once you have a permutation, you can construct the associated Rauzy diagram. They
+can in turn be used to create self-similar interval exchange transformations from
+a loop.
 
     :::pycon
     >>> p = iet.Permutation('a b c d', 'd c b a')
     >>> R = p.rauzy_diagram()
     >>> g = R.path(p, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1)
+    >>> T = g.self_similar_iet()
+    >>> T
+    Interval exchange transformation of [0, a[ with permutation
+    a b c d
+    d c b a
+
+In the path `0` corresponds to top Rauzy induction and `1` to bottom. The number
+`a` that appears in the interval `[0, a[` of the interval exchange string above
+is  a number field element (all computations at this stage are done exactly).
+
+    :::pycon
+    >>> la, lb, lc, ld = T.lengths()
+    >>> (4*lb^2 - 10*lb - 5).is_zero()
+    True
+
+You can extract other information from the loop `g` such as the substitution
+whose fixed point gives the coding of the orbit of the point `0` under the
+interval exchange transformation
+
+    :::pycon
     >>> s = g.substitution()
     >>> s
     WordMorphism: a->adbbd, b->adbbdbbd, c->adbcbcbd, d->adbcbd
     >>> s.fixed_point('a')
     word: adbbdadbcbdadbbdbbdadbbdbbdadbcbdadbbdad...
 
-In the path `0` corresponds to top Rauzy induction and `1` to bottom. The above example
-is exceptional since there are two eigenvalues `1` (while the generic spectrum is simple
-by Avila-Viana)
+The fact that the above infinite word is the coding of `0` can be checked via
+
+    :::pycon
+    >>> x = 0
+    >>> for _ in range(30):
+    ...     print T.in_which_interval(x), 
+    ...     x = T(x)
+    a d b b d a d b c b d a d b b d b b d a d b b d b b d a d b
+
+The example we choose is exceptional since there are two eigenvalues `1` (while
+the generic spectrum is simple by A. Avila M. Viana "Simplicity of Lyapunov
+spectra: proof of the Zorich-Kontsevich conjecture" 2007)
 
     :::pycon
     >>> g.matrix().eigenvalues()
@@ -107,8 +147,17 @@ by Avila-Viana)
 Lyapunov exponents
 ------------------
 
-You can compute Lyapunov exponents of the \( H^+ \) and \( H^- \) Kontsevich-Zorich
-cocycle
+Approxmiations of the Lyapunov exponents of the Kontsevich-Zorich
+cocycle can be computed in various situations. For example on
+connected component of Abelian strata
+
+    :::pycon
+    >>> H4_odd = AbelianStratum(4).odd_component()
+    >>> H4_odd.lyapunov_exponents()
+    [1.0021979229418148, 0.41891862918527395, 0.18809229410591524]
+
+On components of strata of quadratic differentials the exponents on
+\( H^+ \) and \( H^- \) can be computed separatly
 
     :::pycon
     >>> Q12_reg = QuadraticStratum(12).regular_component()
@@ -117,9 +166,9 @@ cocycle
     >>> Q12_reg.lyapunov_exponents_H_minus()
     [1.001, 0.6669, 0.45018, 0.3139, 0.23218, 0.12143, 0.08594]
 
-More generally, one can compute the Lyapunov exponents of the restriction of the
-\( H^+ \) Kontsevich-Zorich cocycle in a covering locus to any isotypic invariant
-subbundle::
+More generally, one can compute the Lyapunov exponents of the restriction of
+the \( H^+ \) Kontsevich-Zorich cocycle in a covering locus to any isotypic
+invariant subbundle::
 
     :::pycon
     >>> p = iet.GeneralizedPermutation('a a', 'b b c c d d e e')
