@@ -1,5 +1,28 @@
-[ 
+[
+ {
+  "doi": "10.1007/978-3-030-16833-9_3",
+  "coauthors": ["A. Avila"],
+  "title": "Some monoids of Pisot matrices",
+  "arxiv": "1506.03692",
+  "website": "https://link.springer.com/chapter/10.1007/978-3-030-16833-9_3",
+  "year": "2019",
+  "abstract": "A matrix norm gives an upper bound on the spectral radius of a matrix. Knowledge on the location of the dominant eigenvector also leads to upper bound of the second eigenvalue. We show how this technique can be used to prove that certain semi-group of matrices arising from continued fractions have a Pisot spectrum: namely for all primitive matrices in this semi-group all eigenvalues except the dominant one is smaller than one in absolute value."
+ },
+
+ {
+  "doi": "10.24033/bsmf.2753",
+  "coauthors": ["J.-F. Bertazzon"],
+  "title": "Sommes de Birkhoff itérées sur des extensions finies d'odomètres. Construction de solutions auto-similaires à des équations différentielles avec délai",
+  "journal": "BullSMF",
+  "volume": "146",
+  "year": "2018",
+  "website": "http://smf4.emath.fr/en/Publications/Bulletin/146/html/smf_bull_146_81-140.php",
+  "arxiv": "1403.2235",
+  "abstract": "Nous étudions les sommes de Birkhoff itérées de fonctions sur certains systèmes dynamiques substitutifs. Les fonctions que nous regardons ont la propriété d'avoir toutes leurs sommes de Birkhoff itérées bornées (ce sont en particulier des cobords). Nous construisons une fonction continue comme limite de ces sommes de Birkhoff et montrons qu'elle vérifie une équation fonctionnelle. Cet article prolonge l'&eacute;tude du premier auteur dans <a href=\"http://arxiv.org/abs/1201.2502\">arXiv:1201.2502</a>."
+ },
+
   {
+   "doi": "10.19086/da.1749",
    "coauthors": ["M. Boshernitzan"],
    "title": " From a packing problem to quantiative recurrence in [0,1] and the Lagrange spectrum of interval exchanges",
    "journal": "DiscreteAnalysis",
@@ -11,6 +34,7 @@
   },
 
   {
+   "doi": "10.1017/etds.2015.74",
    "coauthors": ["V. Berthé", "F. Dolce", "D. Perrin", "C. Reutenauer", "G. Rindone"],
    "title": "Return words of linear involutions and fundamental groups",
    "journal": "ETDS",
@@ -24,6 +48,7 @@
   },
 
   {
+   "doi": "10.1090/jams/856",
    "title": "Weak-mixing directions in non-arithmetic Veech surfaces",
    "coauthors": ["A. Avila"],
    "journal": "JAMS",
@@ -36,6 +61,7 @@
   },
 
   {
+   "doi": "10.4310/MRL.2015.v22.n6.a6",
    "title": "Un contre-exemple à la réciproque du crit&egrave;re de Forni pour la positivité des exposants  de  Lyapunov  du  cocycle  de  Kontsevich-Zorich",
    "coauthors": ["C. Mathéus"],
    "journal": "MathResLett",
@@ -48,6 +74,7 @@
   },
 
   {
+   "doi": "10.1007/s10711-014-9961-7",
    "title": "Diagonal changes in hyperelliptic components. A natural extension to Ferenczi-Zamboni induction",
    "coauthors": ["C. Ulcigrai"],
    "journal": "GeomDed",
@@ -74,6 +101,7 @@
   },
 
   {
+   "doi": "10.24033/asens.2234",
    "title": "Diffusion for the periodic wind-tree model",
    "year": 2014,
    "coauthors": ["P. Hubert", "S. Lelièvre"],
@@ -88,6 +116,7 @@
   },
 
   {
+   "doi": "10.3934/jmd.2013.7.1",
    "title": "Divergent directions in some periodic wind-tree models",
    "year": 2013,
    "journal": "JModDyn",
@@ -101,6 +130,7 @@
   },
 
   {
+   "doi": "10.5802/aif.2811",
    "title": "Cardinality of Rauzy classes",
    "year": 2013,
    "journal": "AIF",

@@ -1,4 +1,9 @@
 {
+  "BullSMF": {
+      "short-name": "Bull. SMF",
+      "full-name": "Bulletin de la SMF",
+      "website": "http://smf4.emath.fr/en/Publications/Bulletin/"
+      },
   "AIF": {
       "short-name": "Ann. Inst. Fourier",
       "full-name": "Annales de l'Institut Fourier",
