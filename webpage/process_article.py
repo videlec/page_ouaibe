@@ -16,24 +16,21 @@ import os
 # for static version
 from markdown.extensions.codehilite import CodeHiliteExtension
 from .sageparser import SageCellExtension
-from .mdx_math import MathExtension
 
-code_hilite = CodeHiliteExtension([])
+code_hilite = CodeHiliteExtension()
 code_hilite.setConfig('guess_lang', False)
 code_hilite.setConfig('css_class', 'code-highlight')
 
 celler = SageCellExtension()
 
-math = MathExtension()
-
 def process_article(text, sage=False):
-    extensions = [code_hilite, math, 'markdown.extensions.tables']
+    extensions = [code_hilite, 'mdx_math', 'markdown.extensions.tables']
     if sage:
-        extensions.insert(0, celler)
+        pass
+        #extensions.insert(0, celler)
 
-    return markdown.markdown(
-        text,
+    return markdown.Markdown(
         encoding="utf-8",
         extensions=extensions,
-        )
+        ).convert(text)
 
