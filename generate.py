@@ -10,12 +10,12 @@
 #                  http://www.gnu.org/licenses/
 #*****************************************************************************
 
-import codecs
 import datetime
 import markdown
 import json
 import os
 import shutil
+import subprocess
 import re
 
 from webpage.process_article import process_article
@@ -28,9 +28,25 @@ ARTICLES_DIR = 'webpage/articles/'
 STATIC_DIR = 'webpage/static/'
 OUTPUT_DIR = 'output/'
 
-#TODO: implement timestamps for everything using a dependency mechanism !!
-
 re_sage_code = re.compile('    :::pycon')
+
+def article_mtime(path):
+    """Last commit time touching `path`, or fs mtime if untracked/dirty.
+
+    Git time is used so the displayed date survives a fresh clone, where
+    filesystem mtimes all reset to checkout time.
+    """
+    try:
+        dirty = subprocess.check_output(
+            ['git', 'status', '--porcelain', '--', path]).strip()
+        if not dirty:
+            ts = subprocess.check_output(
+                ['git', 'log', '-1', '--format=%ct', '--', path]).strip()
+            if ts:
+                return int(ts)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        pass
+    return os.path.getmtime(path)
 
 def article_list():
     articles = []
@@ -48,62 +64,45 @@ def article_list():
                 has_sage_code = False
 
         filename = os.path.join(ARTICLES_DIR, article)
-        mtime = os.path.getmtime(filename)
-        articles.append((mtime, article, has_sage_code))
+        articles.append((article_mtime(filename), article, has_sage_code))
     articles.sort()
     return articles
 
-# copy files from the static dir that are not already in the output one
 for name in os.listdir(STATIC_DIR):
-    static_filename = os.path.join(STATIC_DIR, name)
+    print("Copy static file {}".format(name))
+    shutil.copy(os.path.join(STATIC_DIR, name), os.path.join(OUTPUT_DIR, name))
 
-    output_filename = os.path.join(OUTPUT_DIR, name)
-    static_mtime = os.path.getmtime(static_filename)
-    try:
-        output_mtime = os.path.getmtime(output_filename)
-    except OSError:
-        output_mtime = 0.0
-
-    if static_mtime > output_mtime:
-        print("Copy static file {}".format(name))
-        shutil.copy(static_filename, output_filename)
-
-mtime_data = 0.0
 data = {}
 for kind in ["journals",
              "publications",
              "prepublications",
-             "conference_papers"]:
+             "conference_papers",
+             "news"]:
     print("Loading json data: {}".format(kind))
     filename = os.path.join(DATA_DIR, kind + '.json')
     data[kind] = json.load(open(filename))
-    mtime_data = min(mtime_data, os.path.getmtime(filename))
 
 for content in ["general_presentation",
                 "research_description"]:
     filename = os.path.join(DATA_DIR, content + '.md')
     print("Loading {}".format(filename))
-    with codecs.open(filename, encoding='utf-8') as f:
+    with open(filename) as f:
         data[content] = markdown.markdown(f.read(),
                 extensions=['markdown.extensions.tables'])
-    mtime_data = max(mtime_data, os.path.getmtime(filename))
 
 blog_posts = []
-mtime_posts = 0.0
 for mtime, article, has_sage_code in article_list():
     name = os.path.splitext(article)[-2]
     print("Loading blog post {}".format(name))
     filename = os.path.join(ARTICLES_DIR, article)
-    with codecs.open(filename, encoding='utf-8') as f:
+    with open(filename) as f:
         title = None
         while not title or title.isspace() or title.startswith('[comment]'):
             title = f.readline()
-    mtime_posts = max(mtime_posts, mtime)
     mtime_date = datetime.datetime.fromtimestamp(mtime)
     blog_posts.append({'name': name,
                        'path': os.path.join(ARTICLES_DIR, article),
                        'url': name+'.html',
-                       'mtime': mtime,
                        'lastmodif': mtime_date.strftime("%y/%m/%d"),
                        'title': title,
                        'sage': has_sage_code,
@@ -121,29 +120,17 @@ pages = [
    {'link': 'blog.html', 'name': u'Misc', 'template': 'blog.html'}
    ]
 
-# computing time stamps
 for page in pages:
     page['status'] = 'unselected'
-    filename = os.path.join(OUTPUT_DIR, page['link'])
-    template = os.path.join('webpage', 'templates', page['link'])
-    page['mtime_template'] = os.path.getmtime(template)
-    try:
-        page['mtime_output'] = os.path.getmtime(filename)
-    except OSError:
-        page['mtime_output'] = 0.0
 
 for page in pages:
-    if page['mtime_output'] < max(page['mtime_template'], mtime_data):
-        print(u"Generate {}".format(page['name']))
-
-        template = env.get_template(page['template'])
-        filename = os.path.join('output', page['template'])
-        page['status'] = 'selected'
-        with codecs.open(filename, "w", encoding='utf-8') as output:
-            output.write(template.render(pages=pages, **data))
-        page['status'] = 'unselected'
-    else:
-        print(u"Skip {} because already up to date".format(page['name']))
+    print(u"Generate {}".format(page['name']))
+    template = env.get_template(page['template'])
+    filename = os.path.join('output', page['template'])
+    page['status'] = 'selected'
+    with open(filename, "w") as output:
+        output.write(template.render(pages=pages, **data))
+    page['status'] = 'unselected'
 
 page['status'] = 'selected'  # reselect the blog !!
 template = env.get_template('base_blog.html')
@@ -154,26 +141,17 @@ for blog in blog_posts:
     name = blog['name']
     output_filename = os.path.join('output', name + '.html')
 
-    try:
-        mtime_output = os.path.getmtime(output_filename)
-    except OSError:
-        mtime_output = 0.0
+    print("Process blog '{}' last modified on {}".format(name, blog['lastmodif']))
 
-    if True: # mtime_output < blog['mtime']:
-        print("Process blog '{}' last modified on {}".format(name, blog['lastmodif']))
+    with open(input_filename) as f:
+        content = process_article(f.read())
 
-        with codecs.open(input_filename, encoding="utf-8") as f:
-            content = process_article(f.read())
+    with open(output_filename, "w") as f:
+        f.write(template.render(blog_content=content, pages=pages))
 
-        with codecs.open(output_filename, "w", encoding="utf-8") as f:
-            f.write(template.render(blog_content=content, pages=pages))
-
-        if blog['sage']:
-            output_filename_sage = os.path.join('output', name + '_sage.html')
-            with codecs.open(input_filename, encoding="utf-8") as f:
-                content = process_article(f.read(), sage=True)
-            with codecs.open(output_filename_sage, "w", encoding="utf-8") as f:
-                f.write(template_sage.render(blog_content=content, pages=pages))
-
-    else:
-        print("Skip blog '{}' because already up to date".format(name))
+    if blog['sage']:
+        output_filename_sage = os.path.join('output', name + '_sage.html')
+        with open(input_filename) as f:
+            content = process_article(f.read(), sage=True)
+        with open(output_filename_sage, "w") as f:
+            f.write(template_sage.render(blog_content=content, pages=pages))
