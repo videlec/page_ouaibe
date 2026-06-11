@@ -1,5 +1,12 @@
 [
 {
+  "coauthors": ["O. Fontaine", "A. de Mesmay"],
+  "title": "On the size of k-irreducible triangulations",
+  "arxiv": "2603.20030",
+  "abstract": "A triangulation of a surface is k-irreducible if every non-contractible curve has length at least k and any edge contraction breaks this property. Equivalently, every edge belongs to a non-contractible curve of length k and there are no shorter non-contractible curves. We prove that a k-irreducible triangulation of a surface of genus g has O(k^2 g) triangles, which is optimal."
+},
+
+{
   "coauthors": ["M. Bell", "V. Gadre", "Rodolfo Gutiérrez-Romo", "S. Schleimer"],
   "title" : "Coding Teichmüller flow using veering triangulations",
   "arxiv": "1909.00890",
@@ -7,50 +14,9 @@
 },
 
 {
-  "coauthors": ["E. Goujard", "P. Zograf", "A. Zorich"],
-  "title": "Masur-Veech volumes, frequencies of simple closed geodesics and intersection numbers of moduli spaces of curves",
-  "arxiv": "1908.08611",
-  "abstract": "Masur-Veech volumes, frequencies of simple closed geodesics and intersection numbers of moduli spaces of curves"
-},
-
-{
-  "coauthors": ["C. Matheus", "C. G. Moreira"],
-  "title": " Approximation of the Lagrange and Markov spectra ",
-  "arxiv": "1908.03773",
-  "abstract": "The (classical) Lagrange spectrum is a closed subset of the positive real numbers defined in terms of diophantine approximation. Its structure is quite involved. This article describes a polynomial time algorithm to approximate it in Hausdorff distance. It also extends to approximate the Markov spectrum related to infimum of binary quadratic forms."
-},
-
-{
-  "coauthors": ["J. E. Andersen", "G. Borot", "S. Charbonnier", "A. Giacchetto", "D. Lewanski", "C. Wheeler"],
-  "title": "Topological recursion for Masur-Veech volumes",
-  "arxiv": "1905.10352",
-  "abstract": "We study the Masur--Veech volumes MVg,n of the principal stratum of the moduli space of quadratic differentials of unit area on curves of genus g with n punctures. We show that the volumes MVg,n are the constant terms of a family of polynomials in n variables governed by the topological recursion/Virasoro constraints. This is equivalent to a formula giving these polynomials as a sum over stable graphs, and retrieves a result of Delecroix, Goujard, Zograf and Zorich proved by combinatorial arguments. Our method is different: it relies on the geometric recursion and its application to statistics of hyperbolic lengths of simple multicurves developed by Andersen, Borot and Orantin. We also obtain an expression of the area Siegel-Veech constants in terms of hyperbolic geometry. The topological recursion allows numerical computations of Masur-Veech volumes, and thus of area Siegel-Veech constants for low g and n, which leads us to propose conjectural formulas for low g but all n."
-},
-
-{
-  "coauthors": ["E. Goujard", "P. Zograf", "A. Zorich"],
-  "title": "Contribution of one-cylinder square-tiled surfaces to Masur-Veech volumes",
-  "arxiv": "1903.10904",
-  "abstract": "We compute explicitly the absolute contribution of square-tiled surfaces having a single horizontal cylinder to the Masur-Veech volume of any ambient stratum of Abelian differentials."
-},
-
-{
   "title": "Asymptotics of lieanders with fixed composition sizes",
   "arxiv": "1812.03912",
   "abstract": "Lieanders are special cases of meanders. We derive a polynomial asymptotics via the equidistribution and uncorrelation results from Delecroix-Goujard-Zograf-Zorich"
-},
-
-{
-  "coauthors": ["E. Goujard", "P. Zograf", "A. Zorich"],
-  "title": "Square-tiled surfaces of fixed combinatorial type: equidistribution, counting, volumes of the ambient strata",
-  "arxiv": "1612.08374",
-  "abstract": "We study equidistribution of square-tiled surfaces with constrained combinatorics in strata of translation surfaces."
-},
-
- {
-  "coauthors": ["A. Zorich"],
-  "title": "Cries and whispers in wind-tree forests",
-  "arxiv": "1502.06405"
- },
+}
 
 ]

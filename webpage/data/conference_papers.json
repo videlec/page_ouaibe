@@ -1,7 +1,7 @@
 [
  {
   "doi": "10.1016/j.tcs.2017.03.001",
-  "coauthors": ["D. Perrin", "V. Berthe", "C. De Felice", "J. Leroy", "C. Reutenauer", "G. Rindone"],
+  "coauthors": ["D. Perrin", "V. Berthé", "C. De Felice", "J. Leroy", "C. Reutenauer", "G. Rindone"],
   "title": "Specular sets",
   "website": "http://words2015.uni-kiel.de/",
   "name": "Words 2015",
@@ -14,7 +14,32 @@
   "title": "Balancedness of Arnoux-Rauzy and Brun words",
   "website": "http://www.math.utu.fi/words13/",
   "name": "Words 2013",
-  "arxiv": "1308.6694",
-  "doi": "10.1007/978-3-642-40579-2_14"
+  "arxiv": "1308.6694"
+  },
+
+ {
+   "doi": "10.4230/LIPICS.SOCG.2023.26",
+   "coauthors": ["M. Ebbens", "F. Lazarus", "I. Yakovlev"],
+   "title": "Algorithms for length spectra of combinatorial tori",
+   "website": "https://arxiv.org/abs/2303.08036",
+   "name": "SoCG 2023",
+   "arxiv": "2303.08036"
+  },
+
+ {
+  "doi": "10.1137/1.9781611978971.9",
+  "coauthors": ["O. Fontaine", "F. Lazarus"],
+  "title": "On the computation of Schrijver's kernels",
+  "website": "https://arxiv.org/abs/2510.18597",
+  "name": "SODA 2026",
+  "arxiv": "2510.18597"
+ },
+
+ {
+  "doi": "10.4230/LIPIcs.SoCG.2026.38",
+  "coauthors": ["O. Fontaine", "A. de Mesmay"],
+  "title": "On the size of k-irreducible triangulations",
+  "website": "https://www.dagstuhl.de/dagpub/978-3-95977-418-5",
+  "name": "SoCG 2026"
  }
 ]

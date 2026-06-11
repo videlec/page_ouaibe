@@ -1,19 +1,27 @@
 {
-  "BullSMF": {
-      "short-name": "Bull. SMF",
-      "full-name": "Bulletin de la SMF",
-      "website": "http://smf4.emath.fr/en/Publications/Bulletin/"
+  "AENS": {
+      "short-name": "Ann. Sc. ENS",
+      "full-name": "Annales scientifiques de l'École normale supérieure",
+      "website": "http://www.math.ens.fr/edition/annales/"
       },
+
   "AIF": {
       "short-name": "Ann. Inst. Fourier",
       "full-name": "Annales de l'Institut Fourier",
       "website": "http://aif.cedram.org/"
       },
 
-  "AENS": {
-      "short-name": "Ann. Sc. ENS",
-      "full-name": "Annales scientifiques de l'École normale supérieure",
-      "website": "http://www.math.ens.fr/edition/annales/"
+
+  "ArnoldMathJ": {
+       "short-name": "Arnold Mathematical Journal",
+       "full-name": "Arnold Math. J.",
+       "website": "https://armj.math.stonybrook.edu/"
+      },
+
+  "BullSMF": {
+      "short-name": "Bull. SMF",
+      "full-name": "Bulletin de la SMF",
+      "website": "http://smf4.emath.fr/en/Publications/Bulletin/"
       },
 
   "DiscreteAnalysis": {
@@ -22,10 +30,28 @@
       "website": "http://discreteanalysisjournal.com/"
       },
 
+  "Duke": {
+      "short-name": "Duke Math J.",
+      "full-name": "Duke Mathematical Journal",
+      "website": "https://projecteuclid.org/journals/duke-mathematical-journal"
+      },
+
+  "EJC": {
+      "short-name": "Eur. J. Comb.",
+      "full-name": "European Journal of Combinatorics",
+      "website": "https://www.sciencedirect.com/journal/european-journal-of-combinatorics"
+      },
+
   "ETDS": {
       "short-name": "Erg. Th. and Dyn. Sys.",
       "full-name": "Ergodic Theory and Dynamical Systems",
       "website": "https://www.cambridge.org/core/journals/ergodic-theory-and-dynamical-systems"
+      },
+
+  "ExpMath": {
+      "short-name": "Exp. Math.",
+      "full-name": "Experimental Mathematics",
+      "website": "https://www.tandfonline.com/journals/uexm20"
       },
 
   "GeomDed": {
@@ -34,10 +60,34 @@
       "website": "http://www.springer.com/mathematics/geometry/journal/10711"
        },
 
+  "IMRN": {
+       "short-name": "Int. Math. Res. Not.",
+       "full-name": "International Mathematics Research Notices",
+       "website": "https://academic.oup.com/imrn/issue"
+      },
+
   "JAMS": {
       "short-name": "J. of AMS",
       "full-name": "Journal of the American Mathematical Society",
       "website": "http://www.ams.org/publications/journals/journalsframework/jams"
+      },
+
+  "JCG": {
+      "short-name": "J. Comput. Geom.",
+      "full-name": "Journal of Computational Geometry",
+      "website": "https://jocg.org/index.php/jocg"
+      },
+
+  "JEMS": {
+      "short-name": "J. Eur. Math. Soc. (JEMS)",
+      "full-name": "Journal of the European Mathematical Society",
+      "website": "https://ems.press/journals/jems"
+      },
+
+  "JLondMathSocII": {
+      "short-name": "J. Lond. Math. Soc., II. Ser.",
+      "full-name": "Journal of the London Mathematical Society. Second Series",
+      "website": "https://academic.oup.com/jlms"
       },
 
   "JModDyn": {
@@ -46,16 +96,34 @@
       "website": "http://jmdmath.s3-website-us-east-1.amazonaws.com/"
       },
 
+  "JSAG": {
+      "short-name": "J. Softw. Algebra Geom.",
+      "full-name": "The Journal of Software for Algebra and Geometry",
+      "website": "https://msp.org/jsag/"
+      },
+
   "KokBes": {
       "short-name": "RIMS Kôkyûroku Bessatsu",
       "full-name": "RIMS Kôkyûroku Bessatsu",
       "website": "http://www.kurims.kyoto-u.ac.jp/~kenkyubu/bessatsu.html"
   },
 
+  "MathComp": {
+      "short-name": "Math. Comput.",
+      "full-name": "Mathematics of Computation",
+      "website": "https://www.ams.org/journals/mcom"
+  },
+
   "MathResLett": {
       "short-name": "Math Res. Lett.",
       "full-name": "Mathematical Research Letters",
       "website": "http://intlpress.com/site/pub/pages/journals/items/mrl/_home/_main/"
+  },
+
+ "Pi": {
+      "short-name": "Forum Math., Pi",
+      "full-name": "Forum of Mathematics, Pi",
+      "website": "https://www.cambridge.org/core/journals/forum-of-mathematics-pi"
   }
 }
 

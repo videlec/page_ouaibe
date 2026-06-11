@@ -1,5 +1,134 @@
 [
  {
+  "doi": "10.1080/10586458.2024.2361608",
+  "coauthors": ["J. Rüth"],
+  "title": "A new orbit closure in genus 8?",
+  "journal": "ExpMath",
+  "volume": "34",
+  "number": "2",
+  "year": 2025,
+  "arxiv": "2110.05407"
+ },
+
+ {
+  "doi": "10.4171/JEMS/1469",
+  "coauthors": ["M. Liu"],
+  "title": "Length partition of random multicurves on large genus hyperbolic surfaces",
+  "journal": "JEMS",
+  "volume": "27",
+  "number": "12",
+  "year": "2025",
+  "arxiv": "2202.10255"
+ },
+
+ {
+  "doi": "10.20382/jocg.v15i2a3",
+  "coauthors": ["M. Ebbens", "F. Lazarus", "I. Yakovlev"],
+  "title": "Algorithms for length spectra of combinatorial tori",
+  "journal": "JCG",
+  "year": "2024",
+  "volume": "15",
+  "number": "2",
+  "abstract": "A combinatorial tori is a torus endowed with a metric induced by an embedded graph. We provide algorithms to compute problems related to the length spectra of such tori. Our approach relies on the equivalence between homotopy and homology for tori and the stable norm induced on homology by the metric."
+ },
+
+ {
+ "doi": "10.1016/j.ejc.2023.103802",
+ "coauthors": ["M. Bonamy", "C. Legrand-Duchesne"],
+ "title":  "Kempe changes in degenerate graphs",
+ "journal": "EJC",
+ "volume": "119",
+ "year": "2024",
+ "arxiv": "2112.02313",
+ "abstract": "We consider Kempe changes on the k-colorings of a graph on n vertices. If the graph is (k-1)-degenerate, then all its k-colorings are equivalent up to Kempe changes. However, the sequence between two k-colorings that arises from the proof may be exponential in the number of vertices. An intriguing open question is whether it can be turned polynomial. We prove this to be possible under the stronger assumption that the graph has treewidth at most k-1. We investigate other restrictions (list coloring, bounded maximum average degree, degree bounds). As a main result, we derive that given an n-vertex graph with maximum degree D, the  D-colorings are all equivalent up to O(n^2) Kempe changes, unless D=3 and some connected component is a 3-prism. "
+ },
+
+ {
+ "doi": "10.1093/imrn/rnac231",
+ "coauthors": ["G. Borot", "S. Charbonnier", "A. Giacchetto", "C. Wheeler"],
+ "title": "Around the combinatorial unit ball of measured foliations on bordered surfaces",
+ "journal": "IMRN",
+ "year": "2023",
+  "volume": "2023",
+  "number": "17",
+  "pages": ["14464", "14514"],
+  "arxiv": "2110.12538"
+ },
+
+ {
+ "doi": "10.1112/jlms.12686",
+ "coauthors": ["J. E. Andersen", "G. Borot", "S. Charbonnier", "A. Giacchetto", "D. Lewanski", "C. Wheeler"],
+ "title": "Topological recursion for Masur-Veech volumes",
+ "journal": "JLondMathSocII",
+ "volume": "107",
+ "number": "1",
+ "pages": ["254", "332"],
+ "year": "2023",
+ "arxiv": "1905.10352"
+  },
+
+ {
+  "coauthors": ["E. Goujard", "P. Zograf", "A. Zorich"],
+  "title": "Masur-Veech volumes, frequencies of simple closed geodesics and intersection numbers of moduli spaces of curves",
+  "journal": "Duke",
+  "volume": "12",
+  "year": "2021",
+  "arxiv": "2011.05306",
+  "abstract": "We prove a formula expressing the Masur-Veech volumes of the principal strata of quadratic differentials in terms of intersection of psi-classes on the moduli space of stable curves."
+ },
+
+ {
+  "coauthors": ["J. Schmitt", "J. van Zelm"],
+  "title": "admcycles - a Sage package for calculations in the tautological ring of the moduli space of stable curves",
+  "journal": "JSAG",
+  "year": "2021",
+  "arxiv": "2002.01709",
+  "abstract": "We describe the admcycles library that allows computations in the tautological ring of the moduli space of curves in the computer algebra software SageMath"
+ },
+
+ {
+  "coauthors": ["A. Aggarwal", "E. Goujard", "P. Zograf", "A. Zorich"],
+  "title": "Conjectural large genus asymptotics of Masur-Veech volumes and of area Siegel-Veech constants of strata of quadratic differentials",
+  "journal": "ArnoldMathJ",
+  "year": "2020",
+  "volume": "6",
+  "number": "2",
+  "pages": ["149", "161"],
+  "arxiv": "1912.11702",
+  "abstract": "We state conjectures on the asymptotic behavior of the Masur-Veech volumes of strata in the moduli spaces of meromorphic quadratic differentials and on the asymptotics of their area Siegel-Veech constants as the genus tends to infinity."
+  },
+
+ {
+  "coauthors": ["A. Zorich"],
+  "title": "Cries and whispers in wind-tree forests",
+  "arxiv": "1502.06405"
+ },
+
+ {
+  "coauthors": ["E. Goujard", "P. Zograf", "A. Zorich"],
+  "title": "Contribution of one-cylinder square-tiled surfaces to Masur-Veech volumes",
+  "arxiv": "1903.10904",
+  "abstract": "We compute explicitly the absolute contribution of square-tiled surfaces having a single horizontal cylinder to the Masur-Veech volume of any ambient stratum of Abelian differentials."
+ },
+
+ {
+  "coauthors": ["C. Matheus", "C. G. Moreira"],
+  "title": "Approximation of the Lagrange and Markov spectra",
+  "journal": "MathComp",
+  "year": "2020",
+  "arxiv": "1908.03773",
+  "abstract": "The (classical) Lagrange spectrum is a closed subset of the positive real numbers defined in terms of diophantine approximation. Its structure is quite involved. This article describes a polynomial time algorithm to approximate it in Hausdorff distance. It also extends to approximate the Markov spectrum related to infimum of binary quadratic forms."
+ },
+
+ {
+  "coauthors": ["E. Goujard", "P. Zograf", "A. Zorich"],
+  "title": "Enumeration of meanders and Masur-Veech volumes",
+  "journal": "Pi",
+  "year": "2020",
+  "abstract": "A meander is a topological configuration of a line and a simple closed curve in the plane (or a pair of simple closed curves on the 2-sphere) intersecting transversally. Meanders can be traced back to H. Poincaré and naturally appear in various areas of mathematics, theoretical physics and computational biology (in particular, they provide a model of polymer folding). Enumeration of meanders is an important open problem. The number of meanders with crossings grows exponentially when grows, but the long-standing problem on the precise asymptotics is still out of reach. We show that the situation becomes more tractable if one additionally fixes the topological type (or the total number of minimal arcs) of a meander. Then we are able to derive simple asymptotic formulas for the numbers of meanders as tends to infinity. We also compute the asymptotic probability of getting a simple closed curve on a sphere by identifying the endpoints of two arc systems (one on each of the two hemispheres) along the common equator. The new tools we bring to bear are based on interpretation of meanders as square-tiled surfaces with one horizontal and one vertical cylinder. The proofs combine recent results on Masur–Veech volumes of moduli spaces of meromorphic quadratic differentials in genus zero with our new observation that horizontal and vertical separatrix diagrams of integer quadratic differentials are asymptotically uncorrelated. The additional combinatorial constraints we impose in this article yield explicit polynomial asymptotics."
+ },
+
+ {
   "doi": "10.1007/978-3-030-16833-9_3",
   "coauthors": ["A. Avila"],
   "title": "Some monoids of Pisot matrices",
@@ -18,13 +147,13 @@
   "year": "2018",
   "website": "http://smf4.emath.fr/en/Publications/Bulletin/146/html/smf_bull_146_81-140.php",
   "arxiv": "1403.2235",
-  "abstract": "Nous étudions les sommes de Birkhoff itérées de fonctions sur certains systèmes dynamiques substitutifs. Les fonctions que nous regardons ont la propriété d'avoir toutes leurs sommes de Birkhoff itérées bornées (ce sont en particulier des cobords). Nous construisons une fonction continue comme limite de ces sommes de Birkhoff et montrons qu'elle vérifie une équation fonctionnelle. Cet article prolonge l'&eacute;tude du premier auteur dans <a href=\"http://arxiv.org/abs/1201.2502\">arXiv:1201.2502</a>."
+  "abstract": "Nous étudions les sommes de Birkhoff itérées de fonctions sur certains systèmes dynamiques substitutifs. Les fonctions que nous regardons ont la propriété d'avoir toutes leurs sommes de Birkhoff itérées bornées (ce sont en particulier des cobords). Nous construisons une fonction continue comme limite de ces sommes de Birkhoff et montrons qu'elle vérifie une équation fonctionnelle. Cet article prolonge l'étude du premier auteur dans <a href=\"http://arxiv.org/abs/1201.2502\">arXiv:1201.2502</a>."
  },
 
   {
    "doi": "10.19086/da.1749",
    "coauthors": ["M. Boshernitzan"],
-   "title": " From a packing problem to quantiative recurrence in [0,1] and the Lagrange spectrum of interval exchanges",
+   "title": "From a packing problem to quantitative recurrence in [0,1] and the Lagrange spectrum of interval exchanges",
    "journal": "DiscreteAnalysis",
    "volume": "1749",
    "year": "2017",
@@ -62,8 +191,8 @@
 
   {
    "doi": "10.4310/MRL.2015.v22.n6.a6",
-   "title": "Un contre-exemple à la réciproque du crit&egrave;re de Forni pour la positivité des exposants  de  Lyapunov  du  cocycle  de  Kontsevich-Zorich",
-   "coauthors": ["C. Mathéus"],
+   "title": "Un contre-exemple à la réciproque du critère de Forni pour la positivité des exposants  de  Lyapunov  du  cocycle  de  Kontsevich-Zorich",
+   "coauthors": ["C. Matheus"],
    "journal": "MathResLett",
    "volume": 22,
    "issue": 6,
@@ -85,7 +214,6 @@
    "pages": [117,174],
    "website": "http://link.springer.com/article/10.1007/s10711-014-9961-7",
    "arxiv": "1310.1052",
-   "doi": "10.1007/s10711-014-9961-7",
    "abstract": "In this article, we introduce an induction scheme for translation surfaces in hyperelliptic strata. It can be considered as a geometric counterpart to Ferenczi-Zamboni construction (<a href=\"http://link.springer.com/article/10.1007/s11854-010-0031-2\">J. Analyse Math. 112 (2010)</a>)"
   },
 
@@ -111,7 +239,6 @@
    "pages": [1085, 1110],
    "arxiv": "1107.1810",
    "website": "http://smf4.emath.fr/Publications/AnnalesENS/4_47/html/ens_ann-sc_47_1085-1110.php",
-   "year": 2014,
    "abstract": "The wind-tree model is a billiard in the plane where scatterers are rectangles randomly displaced. We study a periodic version and prove that the diffusion rate is 2/3. More precisely the maximum distance reached by a particule before time T is around T^(2/3). It makes a large difference with random walks in the plane for which that quantity equals T^(1/2)."
   },
 
@@ -124,7 +251,6 @@
    "issue": 1,
    "pages": [1,29],
    "arxiv": "1107.2418",
-   "doi": "10.3934/jmd.2013.7.1",
    "website": "http://aimsciences.org/journals/contentsListJMDnew.jsp?pubID=604",
    "abstract": "We prove that for many choice of rectangular obstacles, there exists divergent directions in the windtree model."
   },
@@ -138,7 +264,6 @@
    "issue": 5,
    "pages": [1651,1715],
    "arxiv": "1106.0807",
-   "doi": "10.5802/aif.2811",
    "website": "http://aif.cedram.org/aif-bin/fitem?id=AIF_2013__63_5_1651_0",
    "abstract": "Rauzy classes are set of permutations that appear in a renormalization scheme of <a href=\"http://en.wikipedia.org/wiki/Interval_exchange_transformation\">interval exchange transformations</a> introduced by Rauzy and further studied by Veech. In this article we provide a formula for the cardinalities of Rauzy classes and make a conjecture about their asymptotics."
   }
