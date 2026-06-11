@@ -1,105 +1,224 @@
+/* ---------- reset & base ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 100%; }
+
 body {
+  margin: 0 auto;
+  max-width: 64rem;
+  padding: 1rem 1.25rem 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
+  color: #1a1a1a;
+  background: #ffffff;
+  -webkit-text-size-adjust: 100%;
 }
 
-.publi {
-  line-height: 1.618em;
+img { max-width: 100%; height: auto; }
+
+a { color: #0b53c1; }
+a:hover { color: #083a8a; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 1em 0;
 }
 
-.publi auteurs{}
-.publi li
-{
-  margin-bottom: 1em;
+/* ---------- layout: photo + content ---------- */
+
+#photo {
+  float: right;
+  width: 25%;
+  max-width: 200px;
+  margin: 0 0 1rem 1.5rem;
 }
-.publi a
-{
+
+#photo img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#left {
+  /* no float, no fixed width — content flows naturally and wraps the photo */
+}
+
+#main {
+  margin: 1rem 0 0;
+  max-width: 70ch;
+}
+
+#top h1, h1 {
+  color: #030363;
+  margin: 0.25em 0 0.5em;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+/* On narrow viewports, stack the photo above the content */
+@media (max-width: 700px) {
+  #photo {
+    float: none;
+    width: 40%;
+    max-width: 160px;
+    margin: 0 0 1rem;
+  }
+  #main { max-width: none; }
+}
+
+/* ---------- navigation menu ---------- */
+
+#menu ul {
+  list-style: none;
+  margin: 0.5em 0 1em;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  line-height: 1.4;
+}
+
+#menu li { display: inline; padding: 0; }
+
+#menu a {
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  color: #0304a5;
+  background: #f3f3f3;
+  border-radius: 4px;
   text-decoration: none;
-  color: #101010;
+  font-weight: 500;
 }
-.publi titre{
-  font-style: bold;
-  text-decoration: underline;
+
+#menu a:hover { background: #e6e6e6; }
+
+#menu .selected a {
+  color: #ffffff;
+  background: #2a6e2a;
+  font-weight: 600;
 }
-.publi journal{
+
+/* ---------- sections ---------- */
+
+.section {
+  line-height: 1.55;
+  margin-bottom: 2em;
+  text-align: justify;
+  hyphens: auto;
 }
-.publi volume{
-  font-style: bold;
+
+.section h2 {
+  margin-top: 2em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.4rem;
 }
-.publi number{
+
+.section h3 { font-size: 1.15rem; }
+
+.section .TD { margin-bottom: 2.3em; }
+
+/* ---------- publications ---------- */
+
+.publi { line-height: 1.6; padding-left: 1.5em; }
+
+.publi li { margin-bottom: 1em; }
+
+.publi a { text-decoration: none; color: #101010; }
+.publi a:hover { text-decoration: underline; }
+
+.publi auteurs, .publi titre, .publi journal,
+.publi volume, .publi number, .publi year, .publi pages {
+  display: inline;
 }
-.publi year{
-}
-.publi pages{
-}
-.publi abstract{
+
+.publi titre { font-weight: bold; text-decoration: underline; }
+.publi volume { font-weight: bold; }
+
+.publi abstract {
+  display: block;
+  margin-top: 0.4em;
   font-style: italic;
   color: #244052;
 }
-.publi abstract a {
-  color: #903030;
+.publi abstract a { color: #903030; }
+
+.publi details { margin-top: 0.4em; }
+
+.publi summary {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.88em;
+  color: #0b53c1;
+  list-style: none;
+  user-select: none;
 }
+.publi summary::-webkit-details-marker { display: none; }
+.publi summary::before { content: "▸ "; }
+.publi details[open] summary::before { content: "▾ "; }
+.publi summary:hover { text-decoration: underline; }
 
-#top{
-}
+.publi summary .lbl-hide { display: none; }
+.publi details[open] summary .lbl-show { display: none; }
+.publi details[open] summary .lbl-hide { display: inline; }
 
-#left{
-  float:left;
-  width: 60%;
-}
+/* ---------- tables (from markdown) ---------- */
 
-#menu ul{
-  line-height: 3em;
-}
-
-#menu ul li{
-  display: inline;
-  padding: .5em;
-}
-
-#menu a {
-  color: #0304a5;
-  background: #fbfbfb;
-  padding-top: .8em;
-  margin-top: 1em;
-  padding-bottom: .8em;
-  padding-left: .5em;
-  padding-right: .5em;
-}
-
-#menu .selected a {
-  color: #f00000;
-  background: #abfbab;
-}
-
-#photo{
-  float: right;
-  margin: 1%;
-  width: 25%;
-}
-
-#top h1{
-  color: #030363;
-}
-
-#main{
-  margin-top: 100px;
-  margin-left: 50px;
-}
-
-
-
-#bottom{
-  float: left;
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
   width: 100%;
 }
 
-.section{
-  line-height: 1.5;
-  margin-bottom: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
-  text-align: justify;
+th, td {
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  vertical-align: top;
 }
 
-.section .TD{
-  margin-bottom: 2.3em;
+th { background: #f5f5f5; font-weight: 600; }
+
+/* ---------- inline code ---------- */
+
+code, kbd, samp {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas,
+               "Liberation Mono", monospace;
+  font-size: 0.92em;
+}
+
+:not(pre) > code {
+  background: #f3f3f3;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+/* ---------- dark mode ---------- */
+
+@media (prefers-color-scheme: dark) {
+  body { color: #e6e6e6; background: #161616; }
+  a { color: #8fb3ff; }
+  a:hover { color: #b9d0ff; }
+  hr { border-top-color: #383838; }
+
+  #top h1, h1 { color: #b9d0ff; }
+
+  #menu a { color: #b9d0ff; background: #2a2a2a; }
+  #menu a:hover { background: #383838; }
+  #menu .selected a { color: #ffffff; background: #2a6e2a; }
+
+  .section h2 { border-bottom-color: #383838; }
+
+  .publi a { color: #d4d4d4; }
+  .publi summary { color: #8fb3ff; }
+  .publi abstract { color: #9ec3d8; }
+  .publi abstract a { color: #ff9c9c; }
+
+  th { background: #232323; }
+  th, td { border-bottom-color: #383838; }
+
+  :not(pre) > code { background: #232323; }
 }
