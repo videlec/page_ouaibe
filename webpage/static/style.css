@@ -51,6 +51,10 @@ hr {
   max-width: 70ch;
 }
 
+/* Pages with a structured publication list need more horizontal room than
+   the 70ch reading-width default. */
+#main:has(.publi) { max-width: none; }
+
 #top h1, h1 {
   color: #030363;
   margin: 0.25em 0 0.5em;
@@ -125,7 +129,54 @@ hr {
 
 .publi { line-height: 1.6; padding-left: 1.5em; }
 
-.publi li { margin-bottom: 1em; }
+ol.publi {
+  padding-left: 2.5em;
+  list-style: none;
+}
+
+.publi li {
+  margin-bottom: 1.5em;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  column-gap: 1.25rem;
+  align-items: start;
+}
+
+ol.publi li { position: relative; }
+
+ol.publi li::before {
+  content: attr(data-num) ".";
+  position: absolute;
+  left: -2em;
+  top: 0;
+  width: 1.5em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.publi-thumb-link { display: contents; }
+
+.publi-thumb {
+  grid-column: 1;
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  height: auto;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+  cursor: zoom-in;
+}
+
+.publi-body { grid-column: 2; min-width: 0; }
+
+@media (max-width: 700px) {
+  .publi li {
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+  }
+  .publi-thumb, .publi-body { grid-column: 1; }
+  .publi-thumb { max-width: 100%; }
+}
 
 .publi a { text-decoration: none; color: #101010; }
 .publi a:hover { text-decoration: underline; }
@@ -146,24 +197,44 @@ hr {
 }
 .publi abstract a { color: #903030; }
 
-.publi details { margin-top: 0.4em; }
+.publi-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
 
+.publi-chip,
 .publi summary {
   display: inline-block;
-  cursor: pointer;
-  font-size: 0.88em;
+  padding: 0.3em 0.75em;
+  font-size: 0.85em;
+  background: #f3f3f3;
   color: #0b53c1;
-  list-style: none;
+  border-radius: 4px;
+  text-decoration: none;
+  line-height: 1.3;
   user-select: none;
+  cursor: pointer;
 }
+.publi-chip:hover,
+.publi summary:hover { background: #e6e6e6; }
+
+.publi summary { list-style: none; }
 .publi summary::-webkit-details-marker { display: none; }
 .publi summary::before { content: "▸ "; }
 .publi details[open] summary::before { content: "▾ "; }
-.publi summary:hover { text-decoration: underline; }
 
 .publi summary .lbl-hide { display: none; }
 .publi details[open] summary .lbl-show { display: none; }
 .publi details[open] summary .lbl-hide { display: inline; }
+
+/* Inside the actions row, let <details> disappear from the box tree so the
+   summary chip sits next to the link chips and the abstract wraps to a new
+   full-width row when open. */
+.publi-actions .abstract-toggle { display: contents; }
+.publi-actions abstract { flex-basis: 100%; }
 
 /* ---------- tables (from markdown) ---------- */
 
@@ -213,7 +284,11 @@ code, kbd, samp {
   .section h2 { border-bottom-color: #383838; }
 
   .publi a { color: #d4d4d4; }
-  .publi summary { color: #8fb3ff; }
+  .publi-chip, .publi summary { color: #b9d0ff; background: #2a2a2a; }
+  .publi-chip:hover, .publi summary:hover { background: #383838; }
+  /* Pragmatic fallback for SVGs with hardcoded dark strokes/fills.
+     Replace with currentColor in the SVG source for cleaner control. */
+  .publi-thumb { filter: invert(0.92) hue-rotate(180deg); }
   .publi abstract { color: #9ec3d8; }
   .publi abstract a { color: #ff9c9c; }
 

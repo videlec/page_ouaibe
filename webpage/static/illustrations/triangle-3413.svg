@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="2845"
+   height="975"
+   color="#000"
+   color-interpolation="srgb"
+   color-interpolation-filters="linearrgb"
+   flood-color="#000"
+   flood-opacity="1"
+   font-family="&quot;Roboto&quot;, sans-serif"
+   font-size="16"
+   font-stretch="100%"
+   font-weight="400"
+   lighting-color="#FFF"
+   overflow="hidden"
+   text-decoration="rgb(0, 0, 0)"
+   text-rendering="optimizelegibility"
+   word-spacing="0"
+   writing-mode="horizontal-tb"
+   style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;isolation:auto;text-align:start;text-decoration-color:#000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed"
+   version="1.1"
+   id="svg380"
+   sodipodi:docname="3413.svg"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview146"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="0.45307557"
+     inkscape:cx="725.04461"
+     inkscape:cy="487.77735"
+     inkscape:window-width="1276"
+     inkscape:window-height="787"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs384" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="3413">
+    <g
+       id="g1103"
+       style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;isolation:auto;text-align:start;text-decoration-color:#000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed">
+      <g
+         fill="#E0FFFF"
+         fill-opacity=".5"
+         id="g22">
+        <path
+           d="m2259.33 666.985 143.628-281.886-143.628-197.687zM2647.313 385.099 2259.33 666.985l312.473-49.491zM1079.302 335.608h244.354L935.674 53.722z"
+           id="path2" />
+        <path
+           d="m2259.33 666.985 387.983-281.886h-244.355zM792.046 335.608 479.573 385.1l456.1 148.196zM935.674 53.722l387.982 281.886-75.51-232.395z"
+           id="path4" />
+        <path
+           d="m2259.33 187.412 143.628 197.687 312.473-49.49zM935.674 533.295 479.573 385.1l223.706 223.706z"
+           id="path6" />
+        <path
+           d="m2715.431 335.608-223.706-223.706-232.395 75.51zM935.674 533.295V53.722L792.046 335.608zM1168.069 608.805l75.51 232.395 148.196-456.101zM935.674 53.722 623.2 103.213l-75.51 232.395z"
+           id="path8" />
+        <path
+           d="m2115.702 385.099 143.628-197.687-456.1 148.196zM703.279 608.805 479.573 385.099l148.196 456.1zM935.674 53.722v479.573l143.628-197.687zM2795.51 841.2l-148.197-456.101-75.51 232.395zM703.279 608.805l-49.491 312.473 281.886-387.983zM1391.775 385.099 935.674 533.295l232.395 75.51zM1391.775 385.099l-148.196 456.1 197.687-143.627z"
+           id="path10" />
+        <path
+           d="m2259.33 187.412-143.628 197.687 143.628 281.886zM547.691 335.608h244.355L935.674 53.722zM2795.51 841.2 2845 528.727l-197.687-143.628zM479.573 385.099 197.687 528.727v244.355zM479.573 385.099l-49.49 312.473L627.768 841.2z"
+           id="path12" />
+        <path
+           d="m1871.348 385.099 387.982 281.886-143.628-281.886zM935.674 533.295l456.1-148.196-312.472-49.49zM197.687 241.47 0 385.1h479.573zM1441.266 697.572l232.395 75.51-281.886-387.983z"
+           id="path14" />
+        <path
+           d="m430.082 697.572 49.49-312.473-281.885 387.983zM935.674 777.65 653.788 921.278h479.573z"
+           id="path16" />
+        <path
+           d="M479.573 385.099H0l197.687 143.628zM1871.348 385.099l75.51 232.395 312.472 49.49zM1217.56 921.278 935.674 533.295V777.65zM2259.33 187.412l-232.395-75.51-223.706 223.706zM653.788 921.278 935.674 777.65V533.295zM1871.348 385.099l-148.196 456.1 223.705-223.705zM1391.775 385.099l281.886 387.983V528.727z"
+           id="path18" />
+        <path
+           d="m1391.775 385.099 281.886 143.628 197.687-143.628zM1723.152 841.2l148.196-456.101-197.687 143.628zM1217.56 921.278l-49.491-312.473-232.395-75.51z"
+           id="path20" />
+      </g>
+      <g
+         fill="#DDAED5"
+         id="g26">
+        <path
+           d="m1946.857 617.494 312.473 49.49 312.473-49.49h-380.591zM1079.302 335.608H792.046L479.573 385.1h912.202z"
+           id="path24" />
+      </g>
+      <g
+         fill="#ABDBAB"
+         id="g30">
+        <path
+           d="m1803.23 335.608 312.472 49.491h287.256l312.473-49.49H2151.66zM910.457 103.213h337.69l-312.473-49.49-312.473 49.49h244.355z"
+           id="path28" />
+      </g>
+      <g
+         fill="#C7D39B"
+         id="g34">
+        <path
+           d="m1441.266 697.572 232.395 75.51v-75.51H1618.8zM2491.725 111.902l-232.395 75.51-232.395-75.51-80.078 80.078H2571.803zM2651.881 697.572h166.377l12.683-80.078H2571.803zM1700.403 697.572H1866.78l80.078-80.078H1687.72l6.342 40.039zM252.548 697.572h-54.861v75.51l232.395-75.51zM758.14 777.65h436.671l-6.341-40.04-6.342-40.038H689.22l-12.684 80.078z"
+           id="path32" />
+      </g>
+      <path
+         fill="#71D5D2"
+         d="M1168.069 608.805h505.592v-80.078H197.687v80.078h792.848z"
+         id="path36" />
+      <g
+         fill="#E7A896"
+         id="g40">
+        <path
+           d="M2327.449 617.494h503.492L2845 528.727H1673.66l14.06 88.767h596.827zM935.674 697.572h246.454l-14.06-88.767H703.28l-14.06 88.767h127.1z"
+           id="path38" />
+      </g>
+      <g
+         fill="#8CC1EA"
+         id="g44">
+        <path
+           d="M252.548 697.572H674.437l28.842-88.767H197.687v88.767zM745.378 191.98h531.611l-28.842-88.767H623.2l-28.842 88.767zM1427.206 608.805H1168.068l28.843 88.767h476.749v-88.767h-119.353z"
+           id="path42" />
+      </g>
+      <g
+         fill="#DEC28F"
+         id="g48">
+        <path
+           d="m935.674 777.65 281.886 143.628-22.749-143.628h-81.603zM430.082 697.572 627.77 841.2l46.668-143.628h-93.335zM547.691 335.608H1323.656L1276.99 191.98H594.358zM197.687 241.47 0 385.1h479.573zM2259.33 335.608h456.101L2571.803 191.98h-624.946L1803.23 335.608h348.43zM1441.266 697.572H1196.91l46.668 143.628zM1866.78 697.572h-166.377l22.749 143.628zM935.674 777.65H676.536l-22.748 143.628h479.573zM2818.258 697.572H2651.882L2795.508 841.2z"
+           id="path46" />
+      </g>
+      <path
+         fill="#9CD3BB"
+         d="M1673.66 528.727H2845l-197.687-143.628H0l197.687 143.628h1298.44z"
+         id="path50" />
+      <g
+         id="g378">
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text52"
+           x="1207.48"
+           y="323.608">A</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="M1079.302 335.608h244.354"
+           id="path54" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m2259.33 666.985 387.983-281.886"
+           id="path56" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text58"
+           x="649.68701"
+           y="388.20599">B</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m792.046 335.608-312.473 49.491"
+           id="path60" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text62"
+           x="2531.136"
+           y="413.099">A</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="M2647.313 385.099h-244.355"
+           id="path64" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M2402.958 385.099 2259.33 666.985"
+           id="path66" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text68"
+           x="2417.6899"
+           y="632.38702">B</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m2259.33 666.985 312.473-49.491"
+           id="path70" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text72"
+           x="2593.093"
+           y="242.24001">C</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m2715.431 335.608-223.706-223.706"
+           id="path74" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m2571.803 617.494 75.51-232.395M935.674 53.722l143.628 281.886M1323.656 335.608 935.674 53.722"
+           id="path76" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text78"
+           x="1235.236"
+           y="719.29401">D</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m1168.069 608.805 75.51 232.395"
+           id="path80" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text82"
+           x="791.315"
+           y="106.32">E</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m935.674 53.722-312.473 49.491"
+           id="path84" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M2402.958 385.099 2259.33 187.412M2259.33 187.412v479.573M479.573 385.099l456.101 148.196M935.674 53.722v479.573M2795.509 841.2l-148.196-456.101"
+           id="path86" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text88"
+           x="704.38599"
+           y="772.91901">F</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m703.279 608.805-49.491 312.473"
+           id="path90" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text92"
+           x="2702.1411"
+           y="722.862">C</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="M2571.803 617.494 2795.509 841.2"
+           id="path94" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m935.674 533.295 143.628-197.687"
+           id="path96" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text98"
+           x="1274.489"
+           y="229.119">D</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m1323.656 335.608-75.509-232.395"
+           id="path100" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m2259.33 187.412-143.628 197.687"
+           id="path102" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text104"
+           x="2561.3181"
+           y="348.50101">E</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m2402.958 385.099 312.473-49.491"
+           id="path106" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text108"
+           x="656.11102"
+           y="721.29401">G</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m627.769 841.2 75.51-232.395"
+           id="path110" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m2115.702 385.099 143.628 281.886"
+           id="path112" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text114"
+           x="675.86902"
+           y="323.608">H</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="M547.691 335.608h244.355"
+           id="path116" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m479.573 385.099 223.706 223.706"
+           id="path118" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text120"
+           x="2810.4021"
+           y="685.086">F</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="M2795.509 841.2 2845 528.727"
+           id="path122" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text124"
+           x="2733.103"
+           y="482.621">I</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m2845 528.727-197.687-143.628"
+           id="path126" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text128"
+           x="2391.2361"
+           y="173.07001">J</text>
+        <path
+           stroke="#D1D1D1"
+           stroke-width="2"
+           d="m2491.725 111.902-232.395 75.51"
+           id="path130" />
+        <path
+           stroke="#DDD"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m1871.348 385.099 387.982 281.886M935.674 533.295l456.101-148.196"
+           id="path132" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 1243.579,841.2 1391.775,385.099"
+           id="path134" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text138"
+           x="129.897"
+           y="338.99301">K</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 197.687,241.471 0,385.099"
+           id="path140" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 2259.33,187.412 1803.229,335.608"
+           id="path144" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text148"
+           x="1569.171"
+           y="723.914">L</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="m 1441.266,697.572 232.395,75.51"
+           id="path150" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 430.082,697.572 479.573,385.099"
+           id="path154" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 653.788,921.278 935.674,533.295"
+           id="path158" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 479.573,385.099 H 0"
+           id="path162" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 197.687,528.727 479.573,385.099"
+           id="path166" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m 1871.348,385.099 75.509,232.395"
+           id="path170" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m 935.674,533.295 232.395,75.51"
+           id="path174" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text178"
+           x="2139.425"
+           y="173.07001">L</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="m 2259.33,187.412 -232.395,-75.51"
+           id="path180" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 653.788,921.278 935.674,777.65"
+           id="path184" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text188"
+           x="233.687"
+           y="654.90399">M</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 197.687,528.727 V 773.082"
+           id="path190" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 1871.348,385.099 1723.152,841.2"
+           id="path194" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text198"
+           x="1235.661"
+           y="388.20599">N</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 1391.775,385.099 1079.302,335.608"
+           id="path200" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 1391.775,385.099 1168.069,608.805"
+           id="path204" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text208"
+           x="899.57397"
+           y="909.27802">O</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="m 653.788,921.278 h 479.573"
+           id="path210" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 2715.431,335.608 2259.33,187.412"
+           id="path214" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 935.674,53.722 792.046,335.608"
+           id="path218" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text222"
+           x="1967.343"
+           y="352.50101">P</text>
+        <path
+           stroke="red"
+           stroke-dasharray="10"
+           stroke-dashoffset="8.64"
+           stroke-width="2"
+           d="m 1803.229,335.608 312.473,49.491"
+           id="path224"
+           style="fill:#d1d1d1;fill-opacity:0.92549;stroke:#d1d1d1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.92549" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text228"
+           x="1830.52"
+           y="720.862">Q</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 1723.152,841.2 1946.857,617.494"
+           id="path230" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text234"
+           x="1182.962"
+           y="772.91901">R</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 1217.56,921.278 1168.069,608.805"
+           id="path236" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text240"
+           x="327.18201"
+           y="337.97699">S</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 479.573,385.099 197.687,241.471"
+           id="path242" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 479.573,385.099 197.687,773.082"
+           id="path246" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 479.573,385.099 627.769,841.2"
+           id="path250" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text254"
+           x="119.897"
+           y="443.20499">I</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 0,385.099 197.687,528.727"
+           id="path256" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text260"
+           x="1339.369"
+           y="759.67798">K</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 1243.579,841.2 1441.266,697.572"
+           id="path262" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text266"
+           x="2112.9709"
+           y="630.38702">N</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="m 1946.857,617.494 312.473,49.491"
+           id="path268" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text272"
+           x="1941.568"
+           y="246.24001">Q</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 2026.935,111.902 1803.229,335.608"
+           id="path274" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 1441.266,697.572 1391.775,385.099"
+           id="path278" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text282"
+           x="1092.0649"
+           y="838.77197">S</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 935.674,777.65 1217.56,921.278"
+           id="path284" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 935.674,777.65 V 533.295"
+           id="path288" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text292"
+           x="549.979"
+           y="755.67798">T</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 430.082,697.572 627.769,841.2"
+           id="path294" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text298"
+           x="1999.525"
+           y="413.099">H</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 2115.702,385.099 H 1871.348"
+           id="path300" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text304"
+           x="1092.033"
+           y="106.32">P</text>
+        <path
+           stroke="red"
+           stroke-dasharray="10"
+           stroke-dashoffset="8.64"
+           stroke-width="2"
+           d="M 1248.147,103.213 935.674,53.722"
+           id="path306"
+           style="fill:#d1d1d1;fill-opacity:1;stroke:#d1d1d1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text310"
+           x="1724.2581"
+           y="683.086">R</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 1673.661,528.727 1723.152,841.2"
+           id="path312" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 1673.661,528.727 1391.775,385.099"
+           id="path316" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="m 703.279,608.805 232.395,-75.51"
+           id="path320" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text324"
+           x="614.85901"
+           y="233.119">G</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="m 623.201,103.213 -75.51,232.395"
+           id="path326" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text330"
+           x="312.17599"
+           y="723.914">J</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="m 197.687,773.082 232.395,-75.51"
+           id="path332" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text336"
+           x="1663.66"
+           y="652.90399">M</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 1673.661,773.082 V 528.727"
+           id="path338" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 1673.661,773.082 1391.775,385.099"
+           id="path342" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 935.674,533.295 1217.56,921.278"
+           id="path346" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 935.674,533.295 792.046,335.608"
+           id="path350" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text354"
+           x="1025.464"
+           y="871.172">T</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 1133.361,921.278 935.674,777.65"
+           id="path356" />
+        <text
+           font-size="12px"
+           font-weight="700"
+           text-anchor="end"
+           id="text360"
+           x="1637.561"
+           y="413.099">O</text>
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="m 1871.348,395.099 v 2"
+           id="path362" />
+        <path
+           d="m 1868.348,397.099 3,-12 3,12 z"
+           id="path364" />
+        <path
+           stroke="#d1d1d1"
+           stroke-width="2"
+           d="M 1871.348,385.099 H 1391.775"
+           id="path366" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 1871.348,385.099 1673.661,528.727"
+           id="path370" />
+        <path
+           stroke="#dddddd"
+           stroke-dasharray="8px, 6px"
+           stroke-width="2"
+           d="M 547.691,335.608 935.674,53.722"
+           id="path374" />
+      </g>
+    </g>
+  </g>
+</svg>

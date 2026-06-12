@@ -10,9 +10,6 @@
 {% macro publication_journal(pub, journals) %}
 {% if pub.journal %}
 <journal>
-{% if pub.website %}
-<a href="{{ pub.website }}">
-{% endif %}
 {{ journals[pub.journal]['short-name'] }}
 {{ pub.volume }}
 {% if pub.issue %}
@@ -22,18 +19,6 @@
 {% if pub.pages %}
 p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 {% endif %}
-{% if pub.website %}
-</a>
-{% endif %}
-</journal>
-<br/>
-{% endif %}
-{%- endmacro %}
-
-{% macro publication_arxiv(arxiv) %}
-{% if arxiv %}
-<journal>
-<a href="http://arxiv.org/abs/{{ arxiv }}">arXiv:{{ arxiv }}</a>
 </journal>
 <br/>
 {% endif %}
@@ -52,6 +37,30 @@ in <em>{{ pub["book-title"] }}</em>
 {% endif %}
 {%- endmacro %}
 
+{% macro publication_links(publisher_url, arxiv, zbmath, abstract) %}
+{% if publisher_url or arxiv or zbmath or abstract %}
+<div class="publi-actions">
+{% if publisher_url %}<a class="publi-chip" href="{{ publisher_url }}" target="_blank" rel="noopener">Journal</a>{% endif %}
+{% if arxiv %}<a class="publi-chip" href="https://arxiv.org/abs/{{ arxiv }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
+{% if zbmath %}<a class="publi-chip" href="https://zbmath.org/{{ zbmath }}" target="_blank" rel="noopener">zbMATH</a>{% endif %}
+{% if abstract %}
+<details class="abstract-toggle">
+<summary><span class="lbl-show">Voir résumé</span><span class="lbl-hide">Masquer résumé</span></summary>
+<abstract>{{ abstract }}</abstract>
+</details>
+{% endif %}
+</div>
+{% endif %}
+{%- endmacro %}
+
+{% macro publication_illustration(illustration, title) %}
+{% if illustration %}
+<a class="publi-thumb-link" href="illustrations/{{ illustration }}" target="_blank" rel="noopener" title="Voir l'illustration en grand">
+<img class="publi-thumb" src="illustrations/{{ illustration }}" alt="{{ title }}"/>
+</a>
+{% endif %}
+{%- endmacro %}
+
 
 {% block title %}Recherche{% endblock %}
 {% block body %}
@@ -61,24 +70,17 @@ in <em>{{ pub["book-title"] }}</em>
 <p>
 <ol reversed="true" class="publi">
 {% for pub in publications %}
-<li>
-
+<li data-num="{{ loop.revindex }}">
+{{ publication_illustration(pub.illustration, pub.title) }}
+<div class="publi-body">
 {{ publication_coauthors(pub.coauthors) }}
 <titre>"{{ pub.title }}"</titre>
 <br/>
 
 {{ publication_journal(pub, journals) }}
 {{ publication_book(pub) }}
-{{ publication_arxiv(pub.arxiv) }}
-
-{% if pub.abstract %}
-<details class="abstract-toggle">
-<summary><span class="lbl-show">Voir résumé</span><span class="lbl-hide">Masquer résumé</span></summary>
-<abstract>
-{{ pub.abstract }}
-</abstract>
-</details>
-{% endif %}
+{{ publication_links(('https://doi.org/' + pub.doi) if pub.doi else pub.website, pub.arxiv, pub.zbmath, pub.abstract) }}
+</div>
 </li>
 {% endfor %}
 </ol>
@@ -91,13 +93,15 @@ in <em>{{ pub["book-title"] }}</em>
 <ul class="publi">
 {% for pub in prepublications %}
 <li>
-
+{{ publication_illustration(pub.illustration, pub.title) }}
+<div class="publi-body">
 {{ publication_coauthors(pub.coauthors) }}
 
 <titre>"{{ pub.title }}"</titre>
 <br/>
 
-{{ publication_arxiv(pub.arxiv) }}
+{{ publication_links('', pub.arxiv, pub.zbmath, pub.abstract) }}
+</div>
 </li>
 {% endfor %}
 </ul>
@@ -108,7 +112,9 @@ in <em>{{ pub["book-title"] }}</em>
 <h2>Articles de conférences</h2>
 <ol reversed="true" class="publi">
 {% for pub in conference_papers %}
-<li>
+<li data-num="{{ loop.revindex }}">
+{{ publication_illustration(pub.illustration, pub.title) }}
+<div class="publi-body">
 {{ publication_coauthors(pub.coauthors) }}
 
 <titre>"{{ pub.title }}"</titre>
@@ -124,17 +130,8 @@ in <em>{{ pub["book-title"] }}</em>
 <br/>
 
 {{ publication_journal(pub, journals) }}
-
-{{ publication_arxiv(pub.arxiv) }}
-
-{% if pub.abstract %}
-<details class="abstract-toggle">
-<summary><span class="lbl-show">Voir résumé</span><span class="lbl-hide">Masquer résumé</span></summary>
-<abstract>
-{{ pub.abstract }}
-</abstract>
-</details>
-{% endif %}
+{{ publication_links(('https://doi.org/' + pub.doi) if pub.doi else '', pub.arxiv, pub.zbmath, pub.abstract) }}
+</div>
 </li>
 {% endfor %}
 </ol>
