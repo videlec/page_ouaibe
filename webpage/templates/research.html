@@ -39,6 +39,19 @@ p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 {% endif %}
 {%- endmacro %}
 
+{% macro publication_book(pub) %}
+{% if pub["book-title"] %}
+<journal>
+in <em>{{ pub["book-title"] }}</em>
+{%- if pub.editors %} ({% for e in pub.editors %}{{ e }}{% if not loop.last %}, {% endif %}{% endfor %}, ed.){% endif -%}
+{%- if pub.series %}, {{ pub.series }} {{ pub["series-volume"] }}{% endif -%}
+, {{ pub.publisher }} ({{ pub.year }})
+{%- if pub.pages %}, p. {{ pub.pages[0] }}-{{ pub.pages[1] }}{% endif %}
+</journal>
+<br/>
+{% endif %}
+{%- endmacro %}
+
 
 {% block title %}Recherche{% endblock %}
 {% block body %}
@@ -55,6 +68,7 @@ p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 <br/>
 
 {{ publication_journal(pub, journals) }}
+{{ publication_book(pub) }}
 {{ publication_arxiv(pub.arxiv) }}
 
 {% if pub.abstract %}

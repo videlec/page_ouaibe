@@ -1,5 +1,25 @@
 [
  {
+  "coauthors": ["O. Fontaine", "A. de Mesmay"],
+  "title": "On the size of k-irreducible triangulations",
+  "arxiv": "2603.20030",
+  "abstract": "A triangulation of a surface is k-irreducible if every non-contractible curve has length at least k and any edge contraction breaks this property. Equivalently, every edge belongs to a non-contractible curve of length k and there are no shorter non-contractible curves. We prove that a k-irreducible triangulation of a surface of genus g has O(k^2 g) triangles, which is optimal."
+ },
+
+ {
+  "coauthors": ["M. Bell", "V. Gadre", "Rodolfo Gutiérrez-Romo", "S. Schleimer"],
+  "title" : "Coding Teichmüller flow using veering triangulations",
+  "arxiv": "1909.00890",
+  "abstract": "We develop the theory of veering triangulations on oriented surfaces adapted to moduli spaces of half-translation surfaces. We use veering triangulations to give a coding of the Teichmüller flow on connected components of strata of quadratic differentials. We prove that this coding, given by a countable shift, has an approximate product structure and a roof function with exponential tails. This makes it conducive to the study of the dynamics of Teichmüller flow."
+ },
+
+ {
+  "title": "Asymptotics of lieanders with fixed composition sizes",
+  "arxiv": "1812.03912",
+  "abstract": "Lieanders are special cases of meanders. We derive a polynomial asymptotics via the equidistribution and uncorrelation results from Delecroix-Goujard-Zograf-Zorich"
+ },
+
+ {
   "doi": "10.1080/10586458.2024.2361608",
   "coauthors": ["J. Rüth"],
   "title": "A new orbit closure in genus 8?",
@@ -101,12 +121,26 @@
  {
   "coauthors": ["A. Zorich"],
   "title": "Cries and whispers in wind-tree forests",
+  "year": 2020,
+  "book-title": "What's next? The mathematical legacy of William P. Thurston",
+  "editors": ["D. P. Thurston"],
+  "publisher": "Princeton University Press",
+  "series": "Ann. Math. Stud.",
+  "series-volume": "205",
+  "pages": [83, 115],
   "arxiv": "1502.06405"
  },
 
  {
   "coauthors": ["E. Goujard", "P. Zograf", "A. Zorich"],
   "title": "Contribution of one-cylinder square-tiled surfaces to Masur-Veech volumes",
+  "year": 2020,
+  "book-title": "Some aspects of the theory of dynamical systems: a tribute to Jean-Christophe Yoccoz. Volume I",
+  "editors": ["S. Crovisier", "R. Krikorian", "C. Matheus", "S. Senti"],
+  "publisher": "Société Mathématique de France",
+  "series": "Astérisque",
+  "series-volume": "415",
+  "pages": [223, 274],
   "arxiv": "1903.10904",
   "abstract": "We compute explicitly the absolute contribution of square-tiled surfaces having a single horizontal cylinder to the Masur-Veech volume of any ambient stratum of Abelian differentials."
  },
@@ -132,9 +166,15 @@
   "doi": "10.1007/978-3-030-16833-9_3",
   "coauthors": ["A. Avila"],
   "title": "Some monoids of Pisot matrices",
+  "year": "2019",
+  "book-title": "New trends in one-dimensional dynamics",
+  "editors": ["M. J. Pacifico", "P. Guarino"],
+  "publisher": "Springer",
+  "series": "Springer Proc. Math. Stat.",
+  "series-volume": "285",
+  "pages": [21, 30],
   "arxiv": "1506.03692",
   "website": "https://link.springer.com/chapter/10.1007/978-3-030-16833-9_3",
-  "year": "2019",
   "abstract": "A matrix norm gives an upper bound on the spectral radius of a matrix. Knowledge on the location of the dominant eigenvector also leads to upper bound of the second eigenvalue. We show how this technique can be used to prove that certain semi-group of matrices arising from continued fractions have a Pisot spectrum: namely for all primitive matrices in this semi-group all eigenvalues except the dominant one is smaller than one in absolute value."
  },
 

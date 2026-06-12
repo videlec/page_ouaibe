@@ -75,12 +75,18 @@ for name in os.listdir(STATIC_DIR):
 data = {}
 for kind in ["journals",
              "publications",
-             "prepublications",
              "conference_papers",
              "news"]:
     print("Loading json data: {}".format(kind))
     filename = os.path.join(DATA_DIR, kind + '.json')
     data[kind] = json.load(open(filename))
+
+# Split the merged publications list: an entry is a prepublication iff it has
+# no associated venue (no `journal` for an article, no `book-title` for a book
+# chapter).
+all_pubs = data['publications']
+data['publications'] = [p for p in all_pubs if 'journal' in p or 'book-title' in p]
+data['prepublications'] = [p for p in all_pubs if 'journal' not in p and 'book-title' not in p]
 
 for content in ["general_presentation",
                 "research_description"]:
