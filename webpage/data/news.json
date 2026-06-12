@@ -1,6 +1,41 @@
 [
 {
-"date": "2026-04-01",
-"content": "Un post-doctorat d'une durée de 18 mois est ouvert, voir l'appel sur <a href=\"https://www.irif.fr/~chapuy/CartesEtPlus.html\">ANR CartesEtPlus</a>)"
+  "date": "2027-04-05 to 2027-05-28",
+  "content": "Mois thématique à Toronto : [Geometry of large random surfaces](http://www.fields.utoronto.ca/activities/26-27/random-surfaces)"
+},
+
+{
+  "date": "2027-01-25 to 2027-02-26",
+  "content": "Mois thématique au CIRM : [La géométrie topologique et ses amies](https://conferences.cirm-math.fr/3726.html)"
+},
+
+{
+  "date": "2026-06-02",
+  "content": "Notre travail \"On the size of k-irreducible triangulations\" avec O. Fontaine et A. de Mesmay a été récompensé du \"Best paper awards à la conférence [SOCG 2026](https://cgweek26.computational-geometry.org)"
+},
+
+{
+  "date": "2026-04-01",
+  "content": "Un post-doctorat d'une durée de 18 mois est ouvert, voir l'appel sur [ANR CartesEtPlus](https://www.irif.fr/~chapuy/CartesEtPlus.html)"
+},
+
+{
+  "date": "2025-10-01",
+  "content": "Ziyue Zhou commence sa thèse sous la direction de Matheus et moi-même sur les constantes de Siegel-Veech des surfaces de translation"
+},
+
+{
+  "date": "2025-07-10",
+  "content": "soutenance de la [thèse de Kai fu](https://theses.fr/2025BORD0129)"
+},
+
+{
+  "date": "2024-07-15",
+  "content": "soutenance de la [thèse de Ivan Yakovlev](https://theses.fr/2024BORD0143)"
+},
+
+{
+  "date": "2024-07-02",
+  "content": "soutenance de la [thèse de Clément Legrand-Duchesne](https://theses.fr/2024BORD0117)"
 }
 ]

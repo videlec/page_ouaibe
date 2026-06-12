@@ -8,12 +8,17 @@
 
   {{ research_description }}
 
+  <h2>Fil d'actualité</h2>
+
   {% if news %}
   <ul>
-  {% for item in news %}
-  <li>{{ item }}</li>
+  {% for item in news[:5] %}
+  <li>{{ item.date_display }} &mdash; {{ item.content }}</li>
   {% endfor %}
   </ul>
+  {% if news|length > 5 %}
+  <p><a href="news.html">Voir toutes les actualités &rarr;</a></p>
+  {% endif %}
   {% endif %}
 
   <h2>A propos</h2>

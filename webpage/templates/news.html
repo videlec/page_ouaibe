@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Fil d'actualité{% endblock %}
+{% block body %}
+
+  <div class="section">
+  <p><a href="index.html">&larr; Retour à la page d'accueil</a></p>
+
+  <h2>Fil d'actualité</h2>
+
+  {% if news %}
+  <ul>
+  {% for item in news %}
+  <li>{{ item.date_display }} &mdash; {{ item.content }}</li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+
+  </div>
+{% endblock %}

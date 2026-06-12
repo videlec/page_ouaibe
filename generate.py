@@ -88,6 +88,44 @@ all_pubs = data['publications']
 data['publications'] = [p for p in all_pubs if 'journal' in p or 'book-title' in p]
 data['prepublications'] = [p for p in all_pubs if 'journal' not in p and 'book-title' not in p]
 
+# Process news items:
+#  - render markdown `content` to HTML (drop the wrapping <p>...</p>)
+#  - format `date` for display: an ISO single date "YYYY-MM-DD" becomes
+#    "5 avril 2027", a range "YYYY-MM-DD to YYYY-MM-DD" becomes "du 5 au 28
+#    avril 2027" (or wider variants for cross-month / cross-year ranges)
+#  - sort the list newest-first using the start of the interval; future
+#    events naturally float to the top by date and need no extra label.
+MONTHS_FR = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+             'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+
+def _fmt_fr(iso_date):
+    y, m, d = iso_date.split('-')
+    return "{} {} {}".format(int(d), MONTHS_FR[int(m) - 1], y)
+
+def format_news_date(date_field):
+    if ' to ' in date_field:
+        start, end = date_field.split(' to ', 1)
+        sy, sm, sd = start.split('-')
+        ey, em, ed = end.split('-')
+        if sy == ey and sm == em:
+            return "du {} au {} {} {}".format(
+                int(sd), int(ed), MONTHS_FR[int(sm) - 1], sy)
+        if sy == ey:
+            return "du {} {} au {} {} {}".format(
+                int(sd), MONTHS_FR[int(sm) - 1],
+                int(ed), MONTHS_FR[int(em) - 1], sy)
+        return "du {} au {}".format(_fmt_fr(start), _fmt_fr(end))
+    return _fmt_fr(date_field)
+
+for item in data['news']:
+    html = markdown.markdown(item['content'])
+    if html.startswith('<p>') and html.endswith('</p>'):
+        html = html[3:-4]
+    item['content'] = html
+    item['date_display'] = format_news_date(item['date'])
+    item['sort_date'] = item['date'].split(' to ', 1)[0]
+data['news'].sort(key=lambda it: it['sort_date'], reverse=True)
+
 for content in ["general_presentation",
                 "research_description"]:
     filename = os.path.join(DATA_DIR, content + '.md')
@@ -136,6 +174,21 @@ for page in pages:
     page['status'] = 'selected'
     with open(filename, "w") as output:
         output.write(template.render(pages=pages, **data))
+    page['status'] = 'unselected'
+
+# Off-menu pages: rendered with the parent section highlighted in the nav so
+# the visitor still feels anchored, but no extra entry in the top menu.
+off_menu = [
+    {'template': 'news.html', 'parent': 'index.html'},
+]
+for off in off_menu:
+    print(u"Generate (off-menu) {}".format(off['template']))
+    for page in pages:
+        page['status'] = 'selected' if page['link'] == off['parent'] else 'unselected'
+    template = env.get_template(off['template'])
+    with open(os.path.join('output', off['template']), 'w') as output:
+        output.write(template.render(pages=pages, **data))
+for page in pages:
     page['status'] = 'unselected'
 
 page['status'] = 'selected'  # reselect the blog !!
