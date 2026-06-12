@@ -1,5 +1,50 @@
 {% extends "base.html" %}
-{% block title %}Présentation{% endblock %}
+{% block title %}Vincent Delecroix — Mathématicien et informaticien, LaBRI Bordeaux{% endblock %}
+{% block description %}Page personnelle de Vincent Delecroix, mathématicien et informaticien, directeur de recherche CNRS au LaBRI à Bordeaux. Combinatoire, théorie des nombres, géométrie et systèmes dynamiques.{% endblock %}
+{% block og_type %}profile{% endblock %}
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vincent Delecroix",
+  "givenName": "Vincent",
+  "familyName": "Delecroix",
+  "jobTitle": "Directeur de recherche CNRS",
+  "image": "{{ site_url }}photo.jpg",
+  "url": "{{ site_url }}",
+  "email": "mailto:vincent.delecroix@labri.fr",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Laboratoire Bordelais de Recherche en Informatique (LaBRI)",
+    "url": "https://www.labri.fr/",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "CNRS",
+      "url": "https://www.cnrs.fr/"
+    }
+  },
+  "knowsAbout": [
+    "Mathématiques", "Informatique",
+    "Combinatoire", "Théorie des nombres",
+    "Géométrie des surfaces", "Systèmes dynamiques",
+    "Dynamique symbolique", "Échanges d'intervalles",
+    "Surfaces de translation", "Mathématiques expérimentales",
+    "SageMath", "Python", "Cython", "C", "C++"
+  ],
+  "sameAs": [
+{%- set links = [] -%}
+{%- if person_ids.orcid %}{% set _ = links.append('"https://orcid.org/' ~ person_ids.orcid ~ '"') %}{% endif -%}
+{%- if person_ids.google_scholar %}{% set _ = links.append('"https://scholar.google.com/citations?user=' ~ person_ids.google_scholar ~ '"') %}{% endif -%}
+{%- if person_ids.arxiv %}{% set _ = links.append('"https://arxiv.org/a/' ~ person_ids.arxiv ~ '"') %}{% endif -%}
+{%- if person_ids.mathscinet %}{% set _ = links.append('"https://mathscinet.ams.org/mathscinet/MRAuthorID/' ~ person_ids.mathscinet ~ '"') %}{% endif -%}
+{%- if person_ids.zbmath_author %}{% set _ = links.append('"https://zbmath.org/authors/?q=ai:' ~ person_ids.zbmath_author ~ '"') %}{% endif -%}
+{%- if person_ids.github %}{% set _ = links.append('"https://github.com/' ~ person_ids.github ~ '"') %}{% endif %}
+    {{ links | join(',\n    ') }}
+  ]
+}
+</script>
+{% endblock %}
 {% block body %}
 
   <div class="section">

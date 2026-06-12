@@ -28,6 +28,17 @@ ARTICLES_DIR = 'webpage/articles/'
 STATIC_DIR = 'webpage/static/'
 OUTPUT_DIR = 'output/'
 
+SITE_URL = 'https://www.labri.fr/perso/vdelecro/'
+
+PERSON_IDS = {
+    'orcid': '0000-0002-9608-782X',
+    'google_scholar': 'ZK3Gn_MAAAAJ',
+    'arxiv': 'delecroix_v_1',
+    'mathscinet': '1026380',
+    'zbmath_author': 'delecroix.vincent',
+    'github': 'videlec',
+}
+
 re_sage_code = re.compile('    :::pycon')
 
 def article_mtime(path):
@@ -132,6 +143,56 @@ for content in ["general_presentation"]:
         data[content] = markdown.markdown(f.read(),
                 extensions=['markdown.extensions.tables'])
 
+def build_publication_jsonld(pub, journals):
+    authors = [{"@type": "Person", "name": "Vincent Delecroix"}]
+    for a in pub.get('coauthors') or []:
+        authors.append({"@type": "Person", "name": a})
+
+    item = {
+        "@type": "ScholarlyArticle",
+        "headline": pub['title'],
+        "author": authors,
+    }
+    if pub.get('year'):
+        item["datePublished"] = str(pub['year'])
+    if pub.get('journal'):
+        journal = journals[pub['journal']]
+        is_part = {
+            "@type": "Periodical",
+            "name": journal.get('full-name') or journal.get('short-name'),
+        }
+        if pub.get('volume'):
+            is_part["volumeNumber"] = str(pub['volume'])
+        if pub.get('issue') or pub.get('number'):
+            is_part["issueNumber"] = str(pub.get('issue') or pub.get('number'))
+        item["isPartOf"] = is_part
+    elif pub.get('book-title'):
+        is_part = {"@type": "Book", "name": pub['book-title']}
+        if pub.get('publisher'):
+            is_part["publisher"] = pub['publisher']
+        item["isPartOf"] = is_part
+    if pub.get('pages'):
+        item["pageStart"] = str(pub['pages'][0])
+        item["pageEnd"] = str(pub['pages'][1])
+    if pub.get('abstract'):
+        item["abstract"] = pub['abstract']
+    same_as = []
+    if pub.get('doi'):
+        item["url"] = "https://doi.org/" + pub['doi']
+        same_as.append(item["url"])
+    if pub.get('arxiv'):
+        same_as.append("https://arxiv.org/abs/" + pub['arxiv'])
+    if pub.get('zbmath'):
+        same_as.append("https://zbmath.org/" + pub['zbmath'])
+    if same_as:
+        item["sameAs"] = same_as
+    return item
+
+data['publications_jsonld'] = [
+    build_publication_jsonld(p, data['journals'])
+    for p in data['publications'] + data['prepublications'] + data['conference_papers']
+]
+
 blog_posts = []
 for mtime, article, has_sage_code in article_list():
     name = os.path.splitext(article)[-2]
@@ -141,6 +202,7 @@ for mtime, article, has_sage_code in article_list():
         title = None
         while not title or title.isspace() or title.startswith('[comment]'):
             title = f.readline()
+    title = title.strip()
     mtime_date = datetime.datetime.fromtimestamp(mtime)
     blog_posts.append({'name': name,
                        'path': os.path.join(ARTICLES_DIR, article),
@@ -170,7 +232,13 @@ for page in pages:
     filename = os.path.join('output', page['template'])
     page['status'] = 'selected'
     with open(filename, "w") as output:
-        output.write(template.render(pages=pages, **data))
+        output.write(template.render(
+            pages=pages,
+            site_url=SITE_URL,
+            canonical_path=page['link'],
+            person_ids=PERSON_IDS,
+            **data,
+        ))
     page['status'] = 'unselected'
 
 # Off-menu pages: rendered with the parent section highlighted in the nav so
@@ -184,7 +252,12 @@ for off in off_menu:
         page['status'] = 'selected' if page['link'] == off['parent'] else 'unselected'
     template = env.get_template(off['template'])
     with open(os.path.join('output', off['template']), 'w') as output:
-        output.write(template.render(pages=pages, **data))
+        output.write(template.render(
+            pages=pages,
+            site_url=SITE_URL,
+            canonical_path=off['template'],
+            **data,
+        ))
 for page in pages:
     page['status'] = 'unselected'
 
@@ -203,11 +276,52 @@ for blog in blog_posts:
         content = process_article(f.read())
 
     with open(output_filename, "w") as f:
-        f.write(template.render(blog_content=content, pages=pages))
+        f.write(template.render(
+            blog_content=content,
+            pages=pages,
+            title=blog['title'],
+            site_url=SITE_URL,
+            canonical_path=blog['url'],
+        ))
 
     if blog['sage']:
         output_filename_sage = os.path.join('output', name + '_sage.html')
         with open(input_filename) as f:
             content = process_article(f.read(), sage=True)
         with open(output_filename_sage, "w") as f:
-            f.write(template_sage.render(blog_content=content, pages=pages))
+            f.write(template_sage.render(
+                blog_content=content,
+                pages=pages,
+                title=blog['title'],
+                site_url=SITE_URL,
+                canonical_path=blog['url_sage'],
+            ))
+
+# sitemap.xml + robots.txt — let crawlers find every page in one shot.
+print("Generate sitemap.xml and robots.txt")
+sitemap_entries = []
+for page in pages:
+    sitemap_entries.append((page['link'], None))
+for off in off_menu:
+    sitemap_entries.append((off['template'], None))
+for blog in blog_posts:
+    lastmod = datetime.datetime.fromtimestamp(
+        article_mtime(blog['path'])).strftime('%Y-%m-%d')
+    sitemap_entries.append((blog['url'], lastmod))
+    if blog['sage']:
+        sitemap_entries.append((blog['url_sage'], lastmod))
+
+with open(os.path.join('output', 'sitemap.xml'), 'w') as f:
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+    f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+    for path, lastmod in sitemap_entries:
+        f.write('  <url><loc>{}{}</loc>'.format(SITE_URL, path))
+        if lastmod:
+            f.write('<lastmod>{}</lastmod>'.format(lastmod))
+        f.write('</url>\n')
+    f.write('</urlset>\n')
+
+with open(os.path.join('output', 'robots.txt'), 'w') as f:
+    f.write('User-agent: *\n')
+    f.write('Allow: /\n')
+    f.write('Sitemap: {}sitemap.xml\n'.format(SITE_URL))

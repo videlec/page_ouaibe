@@ -62,8 +62,19 @@ in <em>{{ pub["book-title"] }}</em>
 {%- endmacro %}
 
 
-{% block title %}Recherche{% endblock %}
+{% block title %}Recherche — Vincent Delecroix{% endblock %}
+{% block description %}Publications, prépublications et articles de conférence de Vincent Delecroix en mathématiques et informatique : combinatoire, géométrie et systèmes dynamiques.{% endblock %}
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": {{ publications_jsonld | tojson }}
+}
+</script>
+{% endblock %}
 {% block body %}
+
+<h1 class="page-title">Recherche</h1>
 
 <div class="section">
 <h2>Publications</h2>

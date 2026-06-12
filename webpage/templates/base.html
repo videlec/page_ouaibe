@@ -1,23 +1,30 @@
-<!DOCTYPE html> 
-
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
-<title>Page personelle de Vincent Delecroix </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Vincent Delecroix">
-<meta name="language" content="fr">
-<meta name="description" content="Page personnelle de Vincent Delecroix, chercheur en informatique au sein du Laboratoire Bordelais en Informatique (LaBRI)">
-<meta name="keywords" content="mathematiques, informatique, vincent, delecroix, echanges d'intervalles, involution lineaires">
+<title>{% block title %}Vincent Delecroix{% endblock %}</title>
+<meta name="description" content="{% block description %}Page personnelle de Vincent Delecroix, mathématicien et informaticien, directeur de recherche CNRS au LaBRI à Bordeaux. Combinatoire, théorie des nombres, géométrie et systèmes dynamiques.{% endblock %}">
+<link rel="canonical" href="{{ site_url }}{{ canonical_path }}">
+
+<meta property="og:type" content="{% block og_type %}website{% endblock %}">
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ self.description() }}">
+<meta property="og:url" content="{{ site_url }}{{ canonical_path }}">
+<meta property="og:image" content="{{ site_url }}photo.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>{% block title %}Default title{% endblock %}</title>
 {% block extra_header %}{% endblock %}
+{% block structured_data %}{% endblock %}
 </head>
 
 <body>
 
-<div id="photo"> <img src="photo.jpg" alt="photo"/> </div>
+<div id="photo"> <img src="photo.jpg" alt="Vincent Delecroix"/> </div>
 
 <div id="left">
 <h1> Vincent Delecroix </h1>
