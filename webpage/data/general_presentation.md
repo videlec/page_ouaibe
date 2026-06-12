@@ -1,3 +1,5 @@
+Je suis depuis 2026 directeur de recherche CNRS affecté au [laboratoire bordelais de recherche en informatique (LaBRI)](https://www.labri.fr/).
+
 Je travaille sur différents problèmes reliés à la combinatoire, la
 théorie des nombres, la géométrie et les systèmes dynamiques.
 
@@ -14,8 +16,8 @@ de combinatoire énumérative (énumération de surfaces à petits carreaux, gé
 asymptotique, ...) et d'algorithmiques des surfaces (spectre des longueurs de
 surfaces combinatoires).
 
-Je suis depuis 2013 chargé de recherche CNRS au
-[LaBRI](http://www.labri.fr/) à Bordeaux. J'ai passé l'année
+J'étais entre 2013 et 2026 chargé de recherche CNRS au
+[LaBRI](http://www.labri.fr/). J'ai passé l'année
 2015-2016 au [CMM à Santiago du
 Chili](https://www.cmm.uchile.cl/?cmm_people=vincent-delecroix)
 et l'année 2018-2019 à [l'Institut Max Planck à Bonn en Allemagne](https://www.mpim-bonn.mpg.de/en).

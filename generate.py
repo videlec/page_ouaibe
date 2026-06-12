@@ -68,9 +68,8 @@ def article_list():
     articles.sort()
     return articles
 
-for name in os.listdir(STATIC_DIR):
-    print("Copy static file {}".format(name))
-    shutil.copy(os.path.join(STATIC_DIR, name), os.path.join(OUTPUT_DIR, name))
+print("Copy static tree {} -> {}".format(STATIC_DIR, OUTPUT_DIR))
+shutil.copytree(STATIC_DIR, OUTPUT_DIR, dirs_exist_ok=True)
 
 data = {}
 for kind in ["journals",
@@ -126,8 +125,7 @@ for item in data['news']:
     item['sort_date'] = item['date'].split(' to ', 1)[0]
 data['news'].sort(key=lambda it: it['sort_date'], reverse=True)
 
-for content in ["general_presentation",
-                "research_description"]:
+for content in ["general_presentation"]:
     filename = os.path.join(DATA_DIR, content + '.md')
     print("Loading {}".format(filename))
     with open(filename) as f:
@@ -158,9 +156,8 @@ data['blog_posts'] = blog_posts
 pages = [
    {'link': 'index.html', 'name': u'Présentation', 'template': 'index.html'},
    {'link': 'research.html', 'name': u'Recherche', 'template': 'research.html'},
-   {'link': 'teaching.html', 'name': u'Enseignement, diffusion', 'template': 'teaching.html'},
-   {'link': 'programming.html', 'name': u'Programmation', 'template': 'programming.html'},
-   {'link': 'contact.html', 'name': u'Contact', 'template': 'contact.html'},
+   {'link': 'teaching.html', 'name': u'Diffusion', 'template': 'teaching.html'},
+   {'link': 'programming.html', 'name': u'Programmes', 'template': 'programming.html'},
    {'link': 'blog.html', 'name': u'Misc', 'template': 'blog.html'}
    ]
 
